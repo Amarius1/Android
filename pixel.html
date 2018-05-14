@@ -8,26 +8,25 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 		<link rel="icon" href="https://i.pinimg.com/originals/9d/b8/58/9db8584a3e81e5a641165c5975f96af6.png">
 		<style>
-			.end01x
+			.end02
 			{
 				position: relative;
-				top: 0;
-				left: 0;
+				top: 12;
+				left: 12;
 			}
-			.fixed-action-btn
-			{
-				left:11px;
-				top:-2px;
+			.carousel .carousel-item {
+				width:500px;
+				height:800px;}
+			.carousel { 
+			min-height: 900px;
 			}
 		</style>
 		<style>
 		.parallax { 
 			/* The image used */
 			background-image: url("images/Pixel.png");
-
 			/* Set a specific height */
 			height: 1400px; 
-
 			/* Create the parallax scrolling effect */
 			background-attachment: fixed;
 			background-position: center;
@@ -46,13 +45,11 @@
 			transform: translateZ(999px) scale(.7);
 			z-index: 1;
 			}
-
 			.base-element {
 			-webkit-transform: translateZ(-100px);
 			transform: translateZ(-10);
 			z-index: 4;
 			}
-
 			.background-element {
 			-webkit-transform: translateZ(-999px) scale(2);
 			transform: translateZ(-999px) scale(2);
@@ -72,7 +69,6 @@
 			padding:6em 1em;
 			margin:2px;
 		}
-
 		p {margin:1em 0;}
 		</style>
 		<title>Android</title>
@@ -80,21 +76,42 @@
    <body background="images/Pixelx.png">
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="js/materialize.min.js"></script>
-		<!--THIS IS A NAVBAR-->
-		<div class="fixed-action-btn">
-		<a href="devices.html" class="end01 hoverable btn-floating waves-effect waves-light red tooltipped" data-position="right" data-background-color="red lighten-3" data-tooltip="Click to go back to the homepage."><i class="material-icons">arrow_back</i></a>
-		</div>
+		<a href="devices.html" class="hoverable btn-floating waves-effect waves-light red tooltipped end02" data-position="right" data-background-color="red lighten-3" data-tooltip="Click to go back."><i class="material-icons">arrow_back</i></a>
 	   	<Br>
 		<center><img src="https://static1.squarespace.com/static/57688b882e69cfaa57b23441/t/5831c208cd0f6827108e335d/1479655984559/?format=750w" width="480" height="270"></center>
-		
-		<div class="container"><div class="card-panel z-depth-3">
-			<span class="blue-text text-darken-2">Google announced the first generation Pixel smartphones, the Pixel and the Pixel XL, on October 4, 2016 during the #MadeByGoogle event. They originally ran Android 7.1 Nougat. Google emphasized the camera on the two phones, which ranked as the best smartphone camera on DxOMarkMobile with 90 points until HTC released the U11, which also scored 90 points. This is largely due to software optimizations such as HDR+. The Pixel phones also include unlimited cloud storage for pictures on Google Photos and an unlockable bootloader.</span>
+		<div class="container"><div class="card-panel grey darken-4 z-depth-3">
+			<span class="white-text text-darken-2">Google announced the first generation Pixel smartphones, the Pixel and the Pixel XL, on October 4, 2016 during the #MadeByGoogle event. They originally ran Android 7.1 Nougat. Google emphasized the camera on the two phones, which ranked as the best smartphone camera on DxOMarkMobile with 90 points until HTC released the U11, which also scored 90 points. This is largely due to software optimizations such as HDR+. The Pixel phones also include unlimited cloud storage for pictures on Google Photos and an unlockable bootloader.</span>	
 		</div>
+		 <ul class="collapsible z-depth-3">
+			<li>
+				<div class="collapsible-header grey lighten-4"><i class="material-icons">developer_board</i>Specifications</div>
+				<div class="collapsible-body white"><span> 
+				<ul>
+					<li><b>CPU:</b> Snapdragon 821 (2x2.15 GHz Kryo & 2x1.6 GHz Kryo)</li>
+					<li><b>GPU:</b> Adreno 530</li>
+					<li><b>Storage:</b> 4GB RAM/64GB </li>
+					<li><b>Camera:</b> 12.3 MP (f/2.0, 1/2.3", 1.55µm), gyro EIS, phase detection & laser autofocus, dual-LED flash HDR+</li>
+					<li><b>Screen:</b> AMOLED 5.0 inches/5.5 inches 1080p/1440p 16:8 Corning Gorilla Glass 4</li>
+					<li><b>Sensors:</b> Fingerprint accelerometer gyro proximity barometer compass</li>
+					<li><b>Battery:</b> 3450mAh with Fast-charge Type-C</li>
+					<li><b>Price:</b> 630€</li>
+				</ul>
+				  
+				  
+				</span></div>
+			</li>
+			</ul>
 		</div>
 		
-		<center><img class="materialboxed" src="images/PixelP.png" align="middle" width="480" height="570"></center>
-		
-		<Br><br><Br><br><Br><br><Br><br><Br><br><Br><br><Br><br><Br><br><Br><br><Br><br><Br><br><Br><br>
+	<div class="row">
+	<div class="col s12">
+	<div class="carousel">
+    <a class="carousel-item" href="#one!"><img src="https://purepng.com/public/uploads/large/purepng.com-google-pixel-1-sideways-viewsmartphoneandroidgooglephoneapplication-211519338655ype2w.png" width="0" height="600"></a>
+    <a class="carousel-item" href="#two!"><img src="http://cdn2.knowyourmobile.com/sites/knowyourmobilecom/files/styles/gallery_wide/public/2016/10/pixel_2grp-2b_silver_final_simp.png?itok=gFNjIi_n" width="0" height="600"></a>
+	<a class="carousel-item" href="#two!"><img src="https://i1.wp.com/ausdroid.net/wp-content/uploads/2016/10/Pixel-Really-Blue-574x700.png?resize=574%2C700" width="0" height="600"></a>
+	</div>
+	</div>
+	</div>
 		
 		<footer class="page-footer blue darken-3 relativex">
 				  <div class="container">
@@ -123,15 +140,28 @@
 					</div>
 				  </div>
 				</footer>
-    
+    <script>
+		$('.carousel').carousel({
+			padding: 200    
+		});
+		autoplay()   
+		function autoplay() {
+			$('.carousel').carousel('next');
+			setTimeout(autoplay, 4500);
+		}
+	</script>
 	<script>
-		var options = [
-		{selector: '.class', offset: 200, callback: customCallbackFunc },
-		{selector: '.other-class', offset: 200, callback: function() {
-		  customCallbackFunc();
-		} },
-	  ];
-	  Materialize.scrollFire(options);
+	 document.addEventListener('DOMContentLoaded', function() {
+		var elems = document.querySelectorAll('.carousel');
+		var instances = M.Carousel.init(elems, options);
+	  });
+
+	  // Or with jQuery
+
+	  $(document).ready(function(){
+		$('.carousel').carousel();
+	  });
+		  
 	</script>
 	
 	<script type="text/javascript" src="../dist/skrollr.min.js"></script>
