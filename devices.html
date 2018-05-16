@@ -25,6 +25,21 @@
 				left:11px;
 				top:-2px;
 			}
+			.come-in {
+			  transform: translateY(150px);
+			  animation: come-in 0.8s ease forwards;
+			}
+			.come-in2 {
+			  transform: translateY(150px);
+			  animation: come-in 1.2s ease forwards;
+			}
+			.come-in:nth-child(odd) {
+			  animation-duration: 1.3s; /* So they look staggered */
+			}
+
+			@keyframes come-in {
+			  to { transform: translateY(0); }
+			}
 		</style>
 		<style>
 		.parallax { 
@@ -254,7 +269,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col s6">
-						<div class="z-depth-5 card grey darken-4">
+						<div class="module z-depth-5 card grey darken-4">
 							<div class="card-content white-text">
 								<span class="card-title">Pixel</span>
 								<p>Google Pixel is a line of consumer electronic devices from Google that run either the Chrome OS or Android operating system. The Pixel brand was introduced in February 2013 with the first generation Chromebook Pixel. The Pixel line includes laptops and smartphones, together with (from 2015 to 2017) the Pixel C tablet. The devices can be bought through the Google Store or at retail stores.</p>
@@ -265,10 +280,10 @@
 								<a class="light-blue-text text-lighten-1 waves-effect" href="#">Pixelbook</a>
 							</div>
 						</div>
-					<br><center><img class="materialboxed" src="images/Google.png" align="middle" width="290" height="100"></center>
+					<br><center><img class="module materialboxed" src="images/Google.png" align="middle" width="290" height="100"></center>
 					</div>
 					<div class="col s6">
-						<div class="card z-depth-5">
+						<div class="module2 card z-depth-5">
 							<div class="card-image waves-effect waves-block waves-light">
 								<img class="activator" src="https://d38v16rqg5mb6e.cloudfront.net/wp-content/uploads/2015/05/Nexus-61.jpg">
 							</div>
@@ -311,6 +326,61 @@
 				</div>
 			</div>
 		</footer>
+		<script>
+		(function($) {
+
+		  /**
+		   * Copyright 2012, Digital Fusion
+		   * Licensed under the MIT license.
+		   * http://teamdf.com/jquery-plugins/license/
+		   *
+		   * @author Sam Sehnert
+		   * @desc A small plugin that checks whether elements are within
+		   *     the user visible viewport of a web browser.
+		   *     only accounts for vertical position, not horizontal.
+		   */
+
+		  $.fn.visible = function(partial) {
+			
+			  var $t            = $(this),
+				  $w            = $(window),
+				  viewTop       = $w.scrollTop(),
+				  viewBottom    = viewTop + $w.height(),
+				  _top          = $t.offset().top,
+				  _bottom       = _top + $t.height(),
+				  compareTop    = partial === true ? _bottom : _top,
+				  compareBottom = partial === true ? _top : _bottom;
+			
+			return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+
+		  };
+			
+		})(jQuery);
+		</script>
+		<script>
+		$(window).scroll(function(event) {
+  
+		  $(".module").each(function(i, el) {
+			var el = $(el);
+			if (el.visible(true)) {
+			  el.addClass("come-in"); 
+			} 
+		  });
+		  
+		});
+		</script>
+		<script>
+		$(window).scroll(function(event) {
+  
+		  $(".module2").each(function(i, el) {
+			var el = $(el);
+			if (el.visible(true)) {
+			  el.addClass("come-in2"); 
+			} 
+		  });
+		  
+		});
+		</script>
 	</body>
 	<script> $(document).ready(function () { $('.slider').slider({full_width: true}); }); </script>
 	<script $(document).ready(function(){$('.tap-target').tapTarget();});</script>

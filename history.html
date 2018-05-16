@@ -20,14 +20,54 @@
 				top: 12;
 				left: 24
 			}
+			.end04
+			{
+				position: relative;
+				top: 20%;
+				left: 0%;
+			}
+			.end05
+			{
+				position: relative;
+				top: 50%;
+				left: 0%;
+			}
+			.end06
+			{
+				position: relative;
+				top: 0%;
+				left: -50%;
+			}
 			.bgimg {
 				background-image: url('History.png');
+			}
+			.zoom {
+				padding: 0;
+				transition: transform .2s; /* Animation */
+				width: 200px;
+				height: 200px;
+				margin: 0 auto;
+			}
+
+			.zoom:hover {
+				transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 			}
 			.carousel .carousel-item {
 				width:500px;
 				height:800px;}
 			.carousel { 
 			min-height: 900px;
+			}
+			.come-in {
+			  transform: translateY(150px);
+			  animation: come-in 5s ease forwards;
+			}
+			.come-in:nth-child(odd) {
+			  animation-duration: 1s; /* So they look staggered */
+			}
+
+			@keyframes come-in {
+			  to { transform: translateY(0); }
 			}
 		</style>
 		<title>History</title>
@@ -43,14 +83,20 @@
   		</div>
 		</a>
 		<Br>
+		<div onselectstart="return false">
 		<center><img src="images/Oldman.gif" width="300" height="300"></center>
-		  
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-		<div class="container">
-			<ul class="collection">
+		<center><img class="end04" src="images/History.png" width="300" height="110"></center>
+		</div>
+		<br><br><br>
+		<center><a href="#history" class="z-depth-5 zoom blue darken-3 big hoverable btn-floating waves-effect btn-large waves-light pulse tooltipped" data-position="bottom" data-background-color="red lighten-3" data-tooltip="History is waiting for you!"><i class="material-icons">expand_more</i></a></center>
+		
+		
+		
+		<div id="history" class="end05 container">
+			<ul class="z-depth-5 module collection">
 				<li class="collection-item avatar">
-					<img src="images/yuna.jpg" alt="" class="circle">
-					<span class="title">Title</span>
+					<img src="https://png.pngtree.com/element_origin_min_pic/16/09/16/1557dba667816d2.jpg" alt="" class="circle">
+					<span class="title">Android 1.6 Donut</span>
 						<p>First Line <br>
 							Second Line
 						</p>
@@ -132,7 +178,7 @@
 		</div>
             
 		  
-		<br><br><br><br>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 		
 		<footer class="page-footer blue darken-3">
 			<div class="container">
@@ -159,6 +205,86 @@
 			</div>
 		
 		</footer>
+		<script>
+		(function($) {
+
+		  /**
+		   * Copyright 2012, Digital Fusion
+		   * Licensed under the MIT license.
+		   * http://teamdf.com/jquery-plugins/license/
+		   *
+		   * @author Sam Sehnert
+		   * @desc A small plugin that checks whether elements are within
+		   *     the user visible viewport of a web browser.
+		   *     only accounts for vertical position, not horizontal.
+		   */
+
+		  $.fn.visible = function(partial) {
+			
+			  var $t            = $(this),
+				  $w            = $(window),
+				  viewTop       = $w.scrollTop(),
+				  viewBottom    = viewTop + $w.height(),
+				  _top          = $t.offset().top,
+				  _bottom       = _top + $t.height(),
+				  compareTop    = partial === true ? _bottom : _top,
+				  compareBottom = partial === true ? _top : _bottom;
+			
+			return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+
+		  };
+			
+		})(jQuery);
+		</script>
+		<script>
+		$(window).scroll(function(event) {
+  
+		  $(".module").each(function(i, el) {
+			var el = $(el);
+			if (el.visible(true)) {
+			  el.addClass("come-in"); 
+			} 
+		  });
+		  
+		});
+		</script>
+		<script>
+		$('a[href*="#"]')
+		  // Remove links that don't actually link to anything
+		  .not('[href="#"]')
+		  .not('[href="#0"]')
+		  .click(function(event) {
+			// On-page links
+			if (
+			  location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+			  && 
+			  location.hostname == this.hostname
+			) {
+			  // Figure out element to scroll to
+			  var target = $(this.hash);
+			  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			  // Does a scroll target exist?
+			  if (target.length) {
+				// Only prevent default if animation is actually gonna happen
+				event.preventDefault();
+				$('html, body').animate({
+				  scrollTop: target.offset().top
+				}, 250, function() {
+				  // Callback after animation
+				  // Must change focus!
+				  var $target = $(target);
+				  $target.focus();
+				  if ($target.is(":focus")) { // Checking if the target was focused
+					return false;
+				  } else {
+					$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+					$target.focus(); // Set focus again
+				  };
+				});
+			  }
+			}
+		  });
+		</script>
 		<script>
 		$('.carousel').carousel({
 			padding: 200    
