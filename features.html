@@ -22,9 +22,65 @@
 			}
 			.end04
 			{
+				position: relative;
+				top: 20%;
+				left: 0%;
+			}
+			.end05
+			{
 				position: absolute;
-				top: 12;
-				left: 88%;
+				top:100%;
+				left: -0.8%;
+			}
+			.end06
+			{
+				position: absolute;
+				top: 80%;
+				left: 29%;
+			}
+			.end07
+			{
+				position: relative;
+				top: 10%;
+				left: 0%;
+			}
+			.end08
+			{
+				position: absolute;
+				top:120%;
+				left:6%;
+			}
+			.protect
+			{
+				position: absolute;
+				top:180%;
+				left:6%;
+			}
+			.ico
+			{
+				position: relative;
+				top: -4%;
+				left: -4%;
+			}
+			.footerX
+			{
+				position: absolute;
+				top: 400%;
+				left: 0%;
+			}
+			.bgimg {
+				background-image: url('History.png');
+			}
+			.zoom {
+				padding: 0;
+				transition: transform .2s; /* Animation */
+				width: 200px;
+				height: 200px;
+				margin: 0 auto;
+			}
+
+			.zoom:hover {
+				transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 			}
 			.carousel .carousel-item {
 				width:500px;
@@ -32,61 +88,72 @@
 			.carousel { 
 			min-height: 900px;
 			}
+			.come-in {
+			  transform: translateY(150px);
+			  animation: come-in 5s ease forwards;
+			}
+			.come-in:nth-child(odd) {
+			  animation-duration: 1s; /* So they look staggered */
+			}
+
+			@keyframes come-in {
+			  to { transform: translateY(0); }
+			}
 		</style>
-		<title>Pixel</title>
+		<title>History</title>
     </head>
-    <body background="images/Pixelx.png">
+    <body onload="script();" bgcolor="white">
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="js/materialize.min.js"></script>
-		<a href="devices.html" class="hoverable btn-floating waves-effect waves-light red tooltipped end02" data-position="right" data-background-color="red lighten-3" data-tooltip="Click to go back."><i class="material-icons">arrow_back</i></a>
-		<a href="pixel2.html">
+		<a href="index.html" class="hoverable btn-floating waves-effect waves-light red tooltipped end02" data-position="right" data-background-color="red lighten-3" data-tooltip="Click to go back."><i class="material-icons">arrow_back</i></a>
+		<a href="devices.html">
 		<div class="chip end03 hoverable">
 		<img src="http://diylogodesigns.com/blog/wp-content/uploads/2016/04/google-logo-icon-PNG-Transparent-Background.png" alt="Contact Person">
-			Related: Google Pixel 2
+			Related: Index
   		</div>
 		</a>
-		<div onselectstart="return false">
-		<div class="end04">
-		<img src="images/Googleguy.gif" width="150" height="150">
-  		</div>
-		</div>
 		<Br>
 		<div onselectstart="return false">
-		<center><img src="https://static1.squarespace.com/static/57688b882e69cfaa57b23441/t/5831c208cd0f6827108e335d/1479655984559/?format=750w" width="480" height="270"></center>
+		<center><img src="https://bootloop.es/wp-content/uploads/2017/09/ezgif.com-crop.gif" width="300" height="300"></center>
+		<center><img class="end04" src="images/Features.png" width="420" height="150"></center>
 		</div>
-		<div class="container"><div class="card-panel grey darken-4 z-depth-3">
-			<span class="white-text text-darken-2">Google announced the first generation Pixel smartphones, the Pixel and the Pixel XL, on October 4, 2016 during the #MadeByGoogle event. They originally ran Android 7.1 Nougat. Google emphasized the camera on the two phones, which ranked as the best smartphone camera on DxOMarkMobile with 90 points until HTC released the U11, which also scored 90 points. This is largely due to software optimizations such as HDR+. The Pixel phones also include unlimited cloud storage for pictures on Google Photos and an unlockable bootloader.</span>	
+		<center>
+		<div class="end06">
+		<a class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light blue" data-position="bottom" data-tooltip="Security"><i class="material-icons red">security</i></a>&nbsp&nbsp&nbsp&nbsp
+		<a class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light purple darken-3" data-position="top" data-tooltip="Notifications"><i class="material-icons  pink darken-3">notifications_active</i></a>&nbsp&nbsp&nbsp&nbsp
+		<a class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light green darken-1" data-position="bottom" data-tooltip="Choices"><i class="material-icons blue-grey darken-1">settings</i></a>&nbsp&nbsp&nbsp&nbsp
+		<a class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light green darken-3" data-position="top" data-tooltip="Sync"><i class="material-icons grey darken-4">sync</i></a>&nbsp&nbsp&nbsp&nbsp
+		<a class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light blue" data-position="bottom" data-tooltip="Google Assistant"><img class="ico" src="https://www.apkmirror.com/wp-content/uploads/2017/10/59d6700c6221e.png" width="63" height="63"></a>&nbsp&nbsp&nbsp&nbsp
+		<a class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light blue" data-position="top" data-tooltip="WearOS"><i class="material-icons blue-grey darken-2">watch</i></a>&nbsp&nbsp&nbsp&nbsp
+		<a class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light blue" data-position="bottom" data-tooltip="Smart Lock"><i class="material-icons blue-grey darken-4">lock_open</i></a>&nbsp&nbsp&nbsp&nbsp
+		<a class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light blue" data-position="top" data-tooltip="Device Location"><i class="material-icons  green darken-2">location_on</i></a>
 		</div>
-		 <ul class="collapsible z-depth-3">
-			<li>
-				<div class="collapsible-header grey lighten-4"><i class="material-icons">developer_board</i>Specifications</div>
-				<div class="collapsible-body white"><span> 
-				<ul>
-					<li><b>CPU:</b> Snapdragon 821 (2x2.15 GHz Kryo & 2x1.6 GHz Kryo)</li>
-					<li><b>GPU:</b> Adreno 530</li>
-					<li><b>Storage:</b> 4GB RAM/64GB </li>
-					<li><b>Camera:</b> 12.3 MP (f/2.0, 1/2.3", 1.55µm), gyro EIS, phase detection & laser autofocus, dual-LED flash HDR+</li>
-					<li><b>Screen:</b> AMOLED 5.0 inches/5.5 inches 1080p/1440p 16:9 Corning Gorilla Glass 4</li>
-					<li><b>Sensors:</b> Fingerprint accelerometer gyro proximity barometer compass</li>
-					<li><b>Battery:</b> 3450mAh with Fast-charge Type-C</li>
-					<li><b>Price:</b> 630€</li>
-				</ul>	  
-				</span></div>
-			</li>
-			</ul>
+		<br><br><br><br><br><br><br><br><br><br><br><br>
+		<div class="end05"><img src="images/Security.png"></div>
+		<div class="protect"><img src="https://lh4.googleusercontent.com/MafEvBxLNNTNe3JZ61Oo5CB2Q2Ro8IfM7piuXQOkulmtC8Ju0WCULpNtNa4XsLJ_YhZQuHbo1db7ZKtoyQ6Vovx78n4UoK9aFE3rWywgQTqwuYokGgmbu8wqatNVOGdUJ5y-jkzG"></div>
+		<div class="end08"><H2 class="white-text">Security</H2></div>
+		
+		
+		
+		
+		
+		<div class="fixed-action-btn">
+		  <a class="btn-floating btn-large red">
+			<i class="large material-icons">mode_edit</i>
+		  </a>
+		  <ul>
+			<li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+			<li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+			<li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+			<li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+		  </ul>
 		</div>
-		<div onselectstart="return false">
-		<div class="row">
-			<div class="col s12">
-				<div class="carousel">
-					<a class="carousel-item" href="#one!"><img src="https://purepng.com/public/uploads/large/purepng.com-google-pixel-1-sideways-viewsmartphoneandroidgooglephoneapplication-211519338655ype2w.png" width="0" height="600"></a>
-					<a class="carousel-item" href="#two!"><img src="http://cdn2.knowyourmobile.com/sites/knowyourmobilecom/files/styles/gallery_wide/public/2016/10/pixel_2grp-2b_silver_final_simp.png?itok=gFNjIi_n" width="0" height="600"></a>
-					<a class="carousel-item" href="#two!"><img src="https://i1.wp.com/ausdroid.net/wp-content/uploads/2016/10/Pixel-Really-Blue-574x700.png?resize=574%2C700" width="0" height="600"></a>
-				</div>
-			</div>
-		</div>
-		</div>
-		<footer class="page-footer blue darken-3">
+		
+		
+		  
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		
+		<footer class="footerX page-footer blue darken-3">
 			<div class="container">
 				<div class="row">
 					<div class="col l6 s12">
@@ -112,13 +179,105 @@
 		
 		</footer>
 		<script>
+		 document.addEventListener('DOMContentLoaded', function() {
+			var elems = document.querySelectorAll('.fixed-action-btn');
+			var instances = M.FloatingActionButton.init(elems, options);
+		  });
+
+		  // Or with jQuery
+
+		  $(document).ready(function(){
+			$('.fixed-action-btn').floatingActionButton();
+		  });
+        </script>
+		<script>
+		(function($) {
+
+		  /**
+		   * Copyright 2012, Digital Fusion
+		   * Licensed under the MIT license.
+		   * http://teamdf.com/jquery-plugins/license/
+		   *
+		   * @author Sam Sehnert
+		   * @desc A small plugin that checks whether elements are within
+		   *     the user visible viewport of a web browser.
+		   *     only accounts for vertical position, not horizontal.
+		   */
+
+		  $.fn.visible = function(partial) {
+			
+			  var $t            = $(this),
+				  $w            = $(window),
+				  viewTop       = $w.scrollTop(),
+				  viewBottom    = viewTop + $w.height(),
+				  _top          = $t.offset().top,
+				  _bottom       = _top + $t.height(),
+				  compareTop    = partial === true ? _bottom : _top,
+				  compareBottom = partial === true ? _top : _bottom;
+			
+			return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+
+		  };
+			
+		})(jQuery);
+		</script>
+		<script>
+		$(window).scroll(function(event) {
+  
+		  $(".module").each(function(i, el) {
+			var el = $(el);
+			if (el.visible(true)) {
+			  el.addClass("come-in"); 
+			} 
+		  });
+		  
+		});
+		</script>
+		<script>
+		$('a[href*="#"]')
+		  // Remove links that don't actually link to anything
+		  .not('[href="#"]')
+		  .not('[href="#0"]')
+		  .click(function(event) {
+			// On-page links
+			if (
+			  location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+			  && 
+			  location.hostname == this.hostname
+			) {
+			  // Figure out element to scroll to
+			  var target = $(this.hash);
+			  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			  // Does a scroll target exist?
+			  if (target.length) {
+				// Only prevent default if animation is actually gonna happen
+				event.preventDefault();
+				$('html, body').animate({
+				  scrollTop: target.offset().top
+				}, 250, function() {
+				  // Callback after animation
+				  // Must change focus!
+				  var $target = $(target);
+				  $target.focus();
+				  if ($target.is(":focus")) { // Checking if the target was focused
+					return false;
+				  } else {
+					$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+					$target.focus(); // Set focus again
+				  };
+				});
+			  }
+			}
+		  });
+		</script>
+		<script>
 		$('.carousel').carousel({
 			padding: 200    
 		});
 		autoplay()   
 		function autoplay() {
 			$('.carousel').carousel('next');
-			setTimeout(autoplay, 3200);
+			setTimeout(autoplay, 4500);
 		}
 		</script>
 		<script>

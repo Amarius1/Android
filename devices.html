@@ -7,6 +7,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 		<link rel="icon" href="https://i.pinimg.com/originals/9d/b8/58/9db8584a3e81e5a641165c5975f96af6.png">
+		
 		<style>
 			.end01x
 			{
@@ -124,7 +125,7 @@
 			<div class="container">
 				<div class="card">
 					<div class="z-depth-5 card-content white-text grey darken-4">
-						<p><center><img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Android_One_logo.png"><Center><br>Android One is a series of smartphones that run the unmodified Android operating system. It is a hardware and software standard created by Google intended to provide a consistent user experience and improved security through frequent updates and Google Play Protect. Android One was launched in 2014 and focused on entry-level devices for emerging markets, but later evolved into Google's principal mobile program.</p>
+						<p><center><img class="responsive-img" src="https://upload.wikimedia.org/wikipedia/commons/8/81/Android_One_logo.png"><Center><br>Android One is a series of smartphones that run the unmodified Android operating system. It is a hardware and software standard created by Google intended to provide a consistent user experience and improved security through frequent updates and Google Play Protect. Android One was launched in 2014 and focused on entry-level devices for emerging markets, but later evolved into Google's principal mobile program.</p>
 					</div>
 					<div class="card-tabs">
 					<ul class="tabs tabs-fixed-width">
@@ -139,7 +140,7 @@
 					<div class="card-content grey lighten-2">
 						<div id="test1">
 							<div class="row">
-								<div class="col s3"><img class="materialboxed" src="http://i01.appmifile.com/webfile/globalimg/zh/goods/mi_a1/back-gold.png" align="middle" width="128" height="261" alt="Mi A1"></div>
+								<div class="col s3"><img class="responsive-img materialboxed" src="http://i01.appmifile.com/webfile/globalimg/zh/goods/mi_a1/back-gold.png" align="middle" width="128" height="261" alt="Mi A1"></div>
 								<div class="col s8"><br>
 								<ul>
 									<li><h5>Specifications</h5></li>
@@ -326,61 +327,6 @@
 				</div>
 			</div>
 		</footer>
-		<script>
-		(function($) {
-
-		  /**
-		   * Copyright 2012, Digital Fusion
-		   * Licensed under the MIT license.
-		   * http://teamdf.com/jquery-plugins/license/
-		   *
-		   * @author Sam Sehnert
-		   * @desc A small plugin that checks whether elements are within
-		   *     the user visible viewport of a web browser.
-		   *     only accounts for vertical position, not horizontal.
-		   */
-
-		  $.fn.visible = function(partial) {
-			
-			  var $t            = $(this),
-				  $w            = $(window),
-				  viewTop       = $w.scrollTop(),
-				  viewBottom    = viewTop + $w.height(),
-				  _top          = $t.offset().top,
-				  _bottom       = _top + $t.height(),
-				  compareTop    = partial === true ? _bottom : _top,
-				  compareBottom = partial === true ? _top : _bottom;
-			
-			return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
-
-		  };
-			
-		})(jQuery);
-		</script>
-		<script>
-		$(window).scroll(function(event) {
-  
-		  $(".module").each(function(i, el) {
-			var el = $(el);
-			if (el.visible(true)) {
-			  el.addClass("come-in"); 
-			} 
-		  });
-		  
-		});
-		</script>
-		<script>
-		$(window).scroll(function(event) {
-  
-		  $(".module2").each(function(i, el) {
-			var el = $(el);
-			if (el.visible(true)) {
-			  el.addClass("come-in2"); 
-			} 
-		  });
-		  
-		});
-		</script>
 	</body>
 	<script> $(document).ready(function () { $('.slider').slider({full_width: true}); }); </script>
 	<script $(document).ready(function(){$('.tap-target').tapTarget();});</script>

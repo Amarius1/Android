@@ -22,9 +22,41 @@
 			}
 			.end04
 			{
-				position: absolute;
-				top: 12;
-				left: 88%;
+				position: relative;
+				top: 20%;
+				left: 0%;
+			}
+			.end05
+			{
+				position: relative;
+				top: 50%;
+				left: 0%;
+			}
+			.end06
+			{
+				position: relative;
+				top: 0%;
+				left: -50%;
+			}
+			.end07
+			{
+				position: relative;
+				top: 5%;
+				left: 0%;
+			}
+			.bgimg {
+				background-image: url('History.png');
+			}
+			.zoom {
+				padding: 0;
+				transition: transform .2s; /* Animation */
+				width: 200px;
+				height: 200px;
+				margin: 0 auto;
+			}
+
+			.zoom:hover {
+				transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 			}
 			.carousel .carousel-item {
 				width:500px;
@@ -32,61 +64,152 @@
 			.carousel { 
 			min-height: 900px;
 			}
+			.come-in {
+			  transform: translateY(150px);
+			  animation: come-in 5s ease forwards;
+			}
+			.come-in:nth-child(odd) {
+			  animation-duration: 1s; /* So they look staggered */
+			}
+
+			@keyframes come-in {
+			  to { transform: translateY(0); }
+			}
 		</style>
-		<title>Pixel</title>
-    </head>
-    <body background="images/Pixelx.png">
+		<title>History</title>
+		</head>
+		<body onload="script();" background="images/Pixel.png">
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="js/materialize.min.js"></script>
-		<a href="devices.html" class="hoverable btn-floating waves-effect waves-light red tooltipped end02" data-position="right" data-background-color="red lighten-3" data-tooltip="Click to go back."><i class="material-icons">arrow_back</i></a>
-		<a href="pixel2.html">
+		<a href="history.html" class="hoverable btn-floating waves-effect waves-light red tooltipped end02" data-position="right" data-background-color="red lighten-3" data-tooltip="Click to go back."><i class="material-icons">arrow_back</i></a>
+		<a href="features.html">
 		<div class="chip end03 hoverable">
 		<img src="http://diylogodesigns.com/blog/wp-content/uploads/2016/04/google-logo-icon-PNG-Transparent-Background.png" alt="Contact Person">
-			Related: Google Pixel 2
+			Related: Features
   		</div>
 		</a>
-		<div onselectstart="return false">
-		<div class="end04">
-		<img src="images/Googleguy.gif" width="150" height="150">
-  		</div>
-		</div>
 		<Br>
-		<div onselectstart="return false">
-		<center><img src="https://static1.squarespace.com/static/57688b882e69cfaa57b23441/t/5831c208cd0f6827108e335d/1479655984559/?format=750w" width="480" height="270"></center>
-		</div>
-		<div class="container"><div class="card-panel grey darken-4 z-depth-3">
-			<span class="white-text text-darken-2">Google announced the first generation Pixel smartphones, the Pixel and the Pixel XL, on October 4, 2016 during the #MadeByGoogle event. They originally ran Android 7.1 Nougat. Google emphasized the camera on the two phones, which ranked as the best smartphone camera on DxOMarkMobile with 90 points until HTC released the U11, which also scored 90 points. This is largely due to software optimizations such as HDR+. The Pixel phones also include unlimited cloud storage for pictures on Google Photos and an unlockable bootloader.</span>	
-		</div>
-		 <ul class="collapsible z-depth-3">
-			<li>
-				<div class="collapsible-header grey lighten-4"><i class="material-icons">developer_board</i>Specifications</div>
-				<div class="collapsible-body white"><span> 
-				<ul>
-					<li><b>CPU:</b> Snapdragon 821 (2x2.15 GHz Kryo & 2x1.6 GHz Kryo)</li>
-					<li><b>GPU:</b> Adreno 530</li>
-					<li><b>Storage:</b> 4GB RAM/64GB </li>
-					<li><b>Camera:</b> 12.3 MP (f/2.0, 1/2.3", 1.55µm), gyro EIS, phase detection & laser autofocus, dual-LED flash HDR+</li>
-					<li><b>Screen:</b> AMOLED 5.0 inches/5.5 inches 1080p/1440p 16:9 Corning Gorilla Glass 4</li>
-					<li><b>Sensors:</b> Fingerprint accelerometer gyro proximity barometer compass</li>
-					<li><b>Battery:</b> 3450mAh with Fast-charge Type-C</li>
-					<li><b>Price:</b> 630€</li>
-				</ul>	  
-				</span></div>
-			</li>
-			</ul>
-		</div>
-		<div onselectstart="return false">
-		<div class="row">
-			<div class="col s12">
-				<div class="carousel">
-					<a class="carousel-item" href="#one!"><img src="https://purepng.com/public/uploads/large/purepng.com-google-pixel-1-sideways-viewsmartphoneandroidgooglephoneapplication-211519338655ype2w.png" width="0" height="600"></a>
-					<a class="carousel-item" href="#two!"><img src="http://cdn2.knowyourmobile.com/sites/knowyourmobilecom/files/styles/gallery_wide/public/2016/10/pixel_2grp-2b_silver_final_simp.png?itok=gFNjIi_n" width="0" height="600"></a>
-					<a class="carousel-item" href="#two!"><img src="https://i1.wp.com/ausdroid.net/wp-content/uploads/2016/10/Pixel-Really-Blue-574x700.png?resize=574%2C700" width="0" height="600"></a>
+		<div class="container">
+			
+			<br>
+			<div class = "col s12 m6">
+				<div class="z-depth-3 video-container">
+					<iframe src="http://www.youtube.com/embed/Q8TXgCzxEnw?wmode=opaque" frameborder="0" height="10px" allowfullscreen></iframe>
 				</div>
 			</div>
+			<div class="card-panel grey lighten-3 z-depth-4">
+			<span class="grey-text text-darken-3"><center><H3>Material Design</H3></center>Material Design (codenamed Quantum Paper) is a design language developed in 2014 by Google. Expanding upon the "card" motifs that debuted in Google Now, Material Design makes more liberal use of grid-based layouts, responsive animations and transitions, padding, and depth effects such as lighting and shadows. Google announced Material Design on June 25, 2014, at the 2014 Google I/O conference.</span>	
+			</div>
+			<br><Br><br><Br><br><Br><br><Br>
+			<h3>Some examples...</h3>
+			<div class="collection">
+				<a href="#!" class="collection-item"><span class="badge">1</span>Alan</a>
+				<a href="#!" class="collection-item"><span class="new badge">4</span>Alan</a>
+				<a href="#!" class="collection-item">Alan</a>
+				<a href="#!" class="collection-item"><span class="badge">14</span>Alan</a>
+			  </div>
+			
+			<div class="row">
+				<div class="col s4">
+				<div class="hoverable card-panel red">
+					<span class="grey-text text-darken-3">This is a red card!</span>
+				</div>
+				</div>
+				<div class="col s4">
+				<div class="hoverable card-panel yellow">
+					<span class="grey-text text-darken-3">This is a cute yellow card.</span>
+				</div>
+				</div>
+				<div class="col s4">
+				<div class="hoverable card-panel blue">
+					<span class="grey-text text-darken-3">I'm just blue...</span>
+				</div>
+				</div>
+				<br>
+				<div class="col s4">
+					<center><a class="waves-effect waves-light btn-large hoverable blue">Button</a>&nbsp&nbsp<a class="hoverable waves-effect waves-light btn white grey-text text-darken-3">button</a>
+				</div>
+				<div class="col s4">
+					<center><a class="waves-effect waves-red btn-flat hoverable">flat</a>&nbsp&nbsp<a class="hoverable green waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
+				</div>
+				<div class="col s4">
+					<center><a class="btn-floating disabled"><i class="material-icons">add</i></a>&nbsp&nbsp <a class="hoverable btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+				</div>
+			</div>
+           <div class="row">
+				<div class="col s6">
+				  <div class="card blue-grey darken-1">
+					<div class="card-content white-text">
+					  <span class="card-title ">Card Title</span>
+					  <p>I am a very simple card. I am good at containing small bits of information.
+					  I am convenient because I require little markup to use effectively.</p>
+					</div>
+					<div class="card-action">
+					  <a href="#">This is a link</a>
+					  <a href="#">This is a link</a>
+					</div>
+				  </div>
+				
+				   <div class="card">
+					<div class="card-image">
+					  <img src="images/Nougat.png">
+					  <span class="card-title black-text">Card Title</span>
+					  <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+					</div>
+					<div class="card-content">
+					  <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+					</div>
+				  </div>
+				</div>			
+				<div class="col s6">
+			  <div class="card">
+				<div class="card-image">
+				  <img src="images/Nougat.png">
+				  <span class="card-title black-text">Card Title</span>
+				</div>
+				<div class="card-content">
+				  <p>I am a very simple card. I am good at containing small bits of information.
+				  I am convenient because I require little markup to use effectively.</p>
+				</div>
+				<div class="card-action">
+				  <a href="#">This is a link</a>
+				</div>
+			  </div>
+			  <div class="z-depth-5 card">
+				<div class="card-image waves-effect waves-block waves-light">
+				  <img class="activator" src="images/History.png">
+				</div>
+				<div class="card-content">
+				  <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+				  <p><a href="#">This is a link</a></p>
+				</div>
+				<div class="card-reveal">
+				  <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+				  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+				</div>
+			  </div>
+			</div>
+			
+			  </div>
+           <div class="fixed-action-btn">
+			  <a class="btn-floating btn-large red">
+				<i class="large material-icons">mode_edit</i>
+			  </a>
+			  <ul>
+				<li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+				<li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+				<li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+				<li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+			  </ul>
+			</div>
+			
+			
+			
 		</div>
-		</div>
-		<footer class="page-footer blue darken-3">
+		
+		<br><br><br>
+		
+		<footer class="end07 page-footer blue darken-3">
 			<div class="container">
 				<div class="row">
 					<div class="col l6 s12">
@@ -112,13 +235,105 @@
 		
 		</footer>
 		<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			var elems = document.querySelectorAll('.fixed-action-btn');
+			var instances = M.FloatingActionButton.init(elems, options);
+		  });
+
+		  // Or with jQuery
+
+		  $(document).ready(function(){
+			$('.fixed-action-btn').floatingActionButton();
+		  });
+		</script>
+		<script>
+		(function($) {
+
+		  /**
+		   * Copyright 2012, Digital Fusion
+		   * Licensed under the MIT license.
+		   * http://teamdf.com/jquery-plugins/license/
+		   *
+		   * @author Sam Sehnert
+		   * @desc A small plugin that checks whether elements are within
+		   *     the user visible viewport of a web browser.
+		   *     only accounts for vertical position, not horizontal.
+		   */
+
+		  $.fn.visible = function(partial) {
+			
+			  var $t            = $(this),
+				  $w            = $(window),
+				  viewTop       = $w.scrollTop(),
+				  viewBottom    = viewTop + $w.height(),
+				  _top          = $t.offset().top,
+				  _bottom       = _top + $t.height(),
+				  compareTop    = partial === true ? _bottom : _top,
+				  compareBottom = partial === true ? _top : _bottom;
+			
+			return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+
+		  };
+			
+		})(jQuery);
+		</script>
+		<script>
+		$(window).scroll(function(event) {
+  
+		  $(".module").each(function(i, el) {
+			var el = $(el);
+			if (el.visible(true)) {
+			  el.addClass("come-in"); 
+			} 
+		  });
+		  
+		});
+		</script>
+		<script>
+		$('a[href*="#"]')
+		  // Remove links that don't actually link to anything
+		  .not('[href="#"]')
+		  .not('[href="#0"]')
+		  .click(function(event) {
+			// On-page links
+			if (
+			  location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+			  && 
+			  location.hostname == this.hostname
+			) {
+			  // Figure out element to scroll to
+			  var target = $(this.hash);
+			  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			  // Does a scroll target exist?
+			  if (target.length) {
+				// Only prevent default if animation is actually gonna happen
+				event.preventDefault();
+				$('html, body').animate({
+				  scrollTop: target.offset().top
+				}, 250, function() {
+				  // Callback after animation
+				  // Must change focus!
+				  var $target = $(target);
+				  $target.focus();
+				  if ($target.is(":focus")) { // Checking if the target was focused
+					return false;
+				  } else {
+					$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+					$target.focus(); // Set focus again
+				  };
+				});
+			  }
+			}
+		  });
+		</script>
+		<script>
 		$('.carousel').carousel({
 			padding: 200    
 		});
 		autoplay()   
 		function autoplay() {
 			$('.carousel').carousel('next');
-			setTimeout(autoplay, 3200);
+			setTimeout(autoplay, 4500);
 		}
 		</script>
 		<script>
