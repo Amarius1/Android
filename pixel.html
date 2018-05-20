@@ -8,6 +8,15 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 		<link rel="icon" href="http://diylogodesigns.com/blog/wp-content/uploads/2016/04/google-logo-icon-PNG-Transparent-Background.png">
 		<style>
+			.collapsible-header.active i.expand {
+				-ms-transform: rotate(180deg); /* IE 9 */
+				-webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+				transform: rotate(180deg);
+			}
+			.collapsible-header i {
+			display: block;
+			float: left;
+			}
 			.end02
 			{
 				position: relative;
@@ -25,6 +34,12 @@
 				position: absolute;
 				top: 12;
 				left: 88%;
+			}
+			.icon
+			{
+				position: relative;
+				top: 0;
+				left: 82%;
 			}
 			.carousel .carousel-item {
 				width:500px;
@@ -54,13 +69,13 @@
 		<div onselectstart="return false">
 		<center><img src="https://static1.squarespace.com/static/57688b882e69cfaa57b23441/t/5831c208cd0f6827108e335d/1479655984559/?format=750w" width="480" height="270"></center>
 		</div>
-		<div class="container"><div class="card-panel grey darken-4 z-depth-3">
+		<div class="container"><div style="border-radius: 10px 10px 10px 10px;" class="card-panel grey darken-4 z-depth-3">
 			<span class="white-text text-darken-2">Google announced the first generation Pixel smartphones, the Pixel and the Pixel XL, on October 4, 2016 during the #MadeByGoogle event. They originally ran Android 7.1 Nougat. Google emphasized the camera on the two phones, which ranked as the best smartphone camera on DxOMarkMobile with 90 points until HTC released the U11, which also scored 90 points. This is largely due to software optimizations such as HDR+. The Pixel phones also include unlimited cloud storage for pictures on Google Photos and an unlockable bootloader.</span>	
 		</div>
-		 <ul class="collapsible z-depth-3">
+		 <ul style="border-radius: 10px 10px 10px 10px;" class="white collapsible z-depth-3">
 			<li>
-				<div class="collapsible-header grey lighten-4"><i class="material-icons">developer_board</i>Specifications</div>
-				<div class="collapsible-body white"><span> 
+				<div onselectstart="return false" style="border-radius: 10px 10px 10px 10px;" class="collapsible-header grey lighten-4"><i class="material-icons">developer_board</i>Specifications<i class="icon material-icons expand">expand_less</i></div>
+				<div style="border-radius: 0px 0px 10px 10px;" class="collapsible-body white"><span> 
 				<ul>
 					<li><b>CPU:</b> Snapdragon 821 (2x2.15 GHz Kryo & 2x1.6 GHz Kryo)</li>
 					<li><b>GPU:</b> Adreno 530</li>
