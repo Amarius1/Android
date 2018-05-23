@@ -8,6 +8,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 		<link rel="icon" href="http://diylogodesigns.com/blog/wp-content/uploads/2016/04/google-logo-icon-PNG-Transparent-Background.png">
 		<style>
+		
 			.end02
 			{
 				position: relative;
@@ -34,9 +35,9 @@
 			}
 			.end06
 			{
-				position: absolute;
-				top: 540px;
-				left: 28%;
+				position: relative;
+				top: 100px;
+				left: 0%;
 			}
 			.end07
 			{
@@ -50,17 +51,41 @@
 				top:0px;
 				left:0%;
 			}
+			.textt
+			{
+				position: relative;
+				top:9px;
+				left:13px;
+			}
+			.text1
+			{
+				position: relative;
+				top:2px;
+				left: 7px;
+			}
+			.text2
+			{
+				position: relative;
+				top:-1px;
+				left: 7px;
+			}
+			.text3
+			{
+				position: relative;
+				top:2px;
+				left: 6px;
+			}
+			.text4
+			{
+				position: relative;
+				top:2px;
+				left: 6px;
+			}
 			.protect
 			{
 				position: relative;
 				top:60%;
 				left:0%;
-			}
-			.ico
-			{
-				position: relative;
-				top: -4%;
-				left: -4%;
 			}
 			.icon
 			{
@@ -77,14 +102,18 @@
 			display: block;
 			float: left;
 			}
-			.footerX
-			{
-				position: absolute;
-				top: 400%;
-				left: 0%;
-			}
-			.bgimg {
-				background-image: url('History.png');
+			.parallax { 
+				/* The image used */
+				background-image: url("images/Earth2.jpg");
+
+				/* Set a specific height */
+				height: 7000px; 
+
+				/* Create the parallax scrolling effect */
+				background-attachment: fixed;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
 			}
 			.zoom {
 				padding: 0;
@@ -93,7 +122,15 @@
 				height: 200px;
 				margin: 0 auto;
 			}
-
+			.gradientx
+			{
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+45,ffffff+51,ffffff+51,ffffff+99,ffffff+99&1+30,0+99 */
+			background: -moz-linear-gradient(top, rgba(255,255,255,1) 30%, rgba(255,255,255,0.78) 45%, rgba(255,255,255,0.69) 51%, rgba(255,255,255,0) 99%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top, rgba(255,255,255,1) 30%,rgba(255,255,255,0.78) 45%,rgba(255,255,255,0.69) 51%,rgba(255,255,255,0) 99%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom, rgba(255,255,255,1) 30%,rgba(255,255,255,0.78) 45%,rgba(255,255,255,0.69) 51%,rgba(255,255,255,0) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+			height: 700px;
+			}
 			.zoom:hover {
 				transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 			}
@@ -127,55 +164,128 @@
 			  .container {
 				width: 80%;
 			}
+				.wrapper {
+				height:2000px;
+				}
 		</style>
-		<title>History</title>
+		<style>
+		 .backdrop{
+		   background-color: #212121;
+		}
+		 .material-tooltip {
+		  border-radius: 60px;
+		}
+		.sticky {
+		  position: fixed;
+		  top: 0;
+		  width: 100%
+
+		}
+		.header {
+		  padding: 10px 16px;
+		  background: #ffffff;
+		  z-index: 999;
+		}
+		.sticky + .content {
+		  padding-top: 60px;
+		}
+		.shrinkm
+		{
+		transform: scale(1, 1);
+		-ms-transform: scale(1, 1);
+		-webkit-transform: scale(1, 1);
+		position: relative;
+				top: -4%;
+				left: -4%;
+		}
+		.shrinkl
+		{
+		transform: scale(0.7, 0.7);
+		-ms-transform: scale(0.7, 0.7);
+		-webkit-transform: scale(0.7, 0.7);
+		position: relative;
+				top: -30%;
+				left: -30%;
+		}
+		.back
+		{
+			position: relative;
+			top: 0;
+			left: 0;
+		}
+		/* width */
+		::-webkit-scrollbar {
+			width: 7px;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track {
+			background: #ffffff; 
+		}
+
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+			background: #888; 
+		}
+
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+			background: #555; 
+		}
+		 </style>
+		<title>Features</title>
     </head>
-    <body onload="script();" bgcolor="white">
+    <body>
+		<div class="gradientx">
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="js/materialize.min.js"></script>
-		<a href="index.html" class="hoverable btn-floating waves-effect waves-light red tooltipped end02" data-position="right" data-background-color="red lighten-3" data-tooltip="Click to go back."><i class="material-icons">arrow_back</i></a>
+		
+		<a href="index.html" class="hoverable btn-floating waves-effect waves-light red tooltipped end02" data-delay="30" data-position="right" data-background-color="red lighten-3" data-tooltip="Click to go back."><i class="material-icons">arrow_back</i></a>
 		<a href="devices.html">
 		<div class="chip end03 hoverable">
 		<img src="http://diylogodesigns.com/blog/wp-content/uploads/2016/04/google-logo-icon-PNG-Transparent-Background.png" alt="Contact Person">
 			Related: Index
   		</div>
 		</a>
-		<Br>
+		<Br id="start">
 		<div onselectstart="return false">
 		<center><img src="https://bootloop.es/wp-content/uploads/2017/09/ezgif.com-crop.gif" width="300" height="300"></center>
 		<center><img class="end04" src="images/Features.png" width="420" height="150"></center>
 		</div>
 		<center>
-		<div class="end06">
-		<a href="#security" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light red" data-position="bottom" data-tooltip="Security"><i class="material-icons red">security</i></a>&nbsp&nbsp&nbsp&nbsp
-		<a class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light pink darken-3" data-position="top" data-tooltip="Notifications"><i class="material-icons  pink darken-3">notifications_active</i></a>&nbsp&nbsp&nbsp&nbsp
-		<a class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light blue-grey darken-1" data-position="bottom" data-tooltip="Choices"><i class="material-icons blue-grey darken-1">settings</i></a>&nbsp&nbsp&nbsp&nbsp
-		<a class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light grey darken-4" data-position="top" data-tooltip="Sync"><i class="material-icons grey darken-4">sync</i></a>&nbsp&nbsp&nbsp&nbsp
-		<a class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light white" data-position="bottom" data-tooltip="Google Assistant"><img class="ico" src="https://www.apkmirror.com/wp-content/uploads/2017/10/59d6700c6221e.png" width="63" height="63"></a>&nbsp&nbsp&nbsp&nbsp
-		<a class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light blue-grey darken-2" data-position="top" data-tooltip="WearOS"><i class="material-icons blue-grey darken-2">watch</i></a>&nbsp&nbsp&nbsp&nbsp
-		<a class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light blue-grey darken-4" data-position="bottom" data-tooltip="Smart Lock"><i class="material-icons blue-grey darken-4">lock_open</i></a>&nbsp&nbsp&nbsp&nbsp
-		<a href="#devicelocation" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light green darken-2" data-position="top" data-tooltip="Device Location"><i class="material-icons  green darken-2">location_on</i></a>
+		
+		<br>
+		<div class="header" id="myHeader">
+		<a href="#security" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light red" data-delay="50" data-position="bottom" data-tooltip="Security"><i class="tiny material-icons red">security</i></a>&nbsp&nbsp&nbsp&nbsp
+		<a href="#notif" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light pink darken-3" data-delay="50" data-position="bottom" data-tooltip="Notifications"><i class="material-icons  pink darken-3">notifications_active</i></a>&nbsp&nbsp&nbsp&nbsp
+		<a href="#choices" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light blue-grey darken-1" data-delay="50" data-position="bottom" data-tooltip="Choices"><i class="material-icons blue-grey darken-1">settings</i></a>&nbsp&nbsp&nbsp&nbsp
+		<a href="#sync" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light grey darken-4" data-delay="50" data-position="bottom" data-tooltip="Sync"><i class="material-icons grey darken-4">sync</i></a>&nbsp&nbsp&nbsp&nbsp
+		<a href="#ga" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light white" data-delay="50" data-position="bottom" data-tooltip="Google Assistant"><img class="shrinkm" src="https://www.apkmirror.com/wp-content/uploads/2017/10/59d6700c6221e.png" width="63" height="63"></a>&nbsp&nbsp&nbsp&nbsp
+		<a href="#wear" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light blue-grey darken-2" data-delay="50" data-position="bottom" data-tooltip="WearOS"><i class="material-icons blue-grey darken-2">watch</i></a>&nbsp&nbsp&nbsp&nbsp
+		<a href="#smart" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light blue-grey darken-4" data-delay="50" data-position="bottom" data-tooltip="Smart Lock"><i class="material-icons blue-grey darken-4">lock_open</i></a>&nbsp&nbsp&nbsp&nbsp
+		<a href="#devicelocation" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light green darken-2" data-delay="50" data-position="bottom" data-tooltip="Device Location"><i class="material-icons  green darken-2">location_on</i></a>
 		</div>
-		<div class="divider container"></div>
+		</div>
+		
+		<div class="parallax">
 		</center>
-		<br><br><br><br><br><br><br><div class="divider container"></div><br><br><br><br><br><br><br><br><br><br id="security"><br>
-		<div class="end08"><H2 class="grey-text text-darken-3">&nbsp&nbsp&nbsp&nbsp&nbspSecurity</H2></div>
-		<div class="row">
-			<div class="container">
-			<div class="col s6">
-			<div style="border-radius: 10px 10px 10px 10px;" class="z-depth-4 card-panel green darken-2">
-				<span class="flow-text grey-text text-lighten-2">Google Play Protect is Google's built-in malware protection for Android. Backed by the strength of Google's machine learning algorithms, it is always improving in real time.</span>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br id="security"><br><br>
+		<br><div class="end08"><H2 class="grey-text text-lighten-3 container">Security</H2></div><br>
+		<div class="container">
+			<div style="border-radius: 10px 10px 10px 10px;" class="z-depth-3 card-panel grey lighten-4">
+			<div class="row">
+				<div class="col s9"><span style="#position: absolute; #top: 50%;display: table-cell; vertical-align: middle;" class="textt flow-text grey-text text-darken-4">Google Play Protect is Google's built-in malware protection for Android. Backed by the strength of Google's machine learning algorithms, it is always improving in real time.<br><br>All Android apps undergo rigorous security testing before appearing in the Google Play Store. They vet every app and developer in Google Play, and suspend those who violate our policies. Then, Play Protect scans billions of apps daily to make sure everything remains spot on. That way, no matter where you download an app from, you know it’s been checked by Google Play Protect.</span></div>
+				<div class="col s3"><br><br><center><img class="materialboxed" src="https://www.android.com/static/2016/img/play-protect/google-play-protect.png" width="250" height="250" id="overlay"></center></div>
+				</div>
 			</div>
-			</div>
-			</div>
-		<div class="col s6"><center><img class="materialboxed" src="https://www.android.com/static/2016/img/play-protect/google-play-protect.png" width="250" height="250"></center></div>
 		</div>
+		<br><br><br><br><br>
 		<div class="row">
 		<div class="col s6"><center><div class="container"><img class="materialboxed" src="https://www.android.com/static/2016/img/security/overview/device-app-are-free.png" width="420" height="420"></div></center></div>
 			<div class="container">
 			<div class="col s6">
 			<br><br><br><div style="border-radius: 10px 10px 10px 10px;" class="z-depth-4 card-panel amber darken-3">
-				<span class="flow-text grey-text text-lighten-2">The software continuously works to keep your device, data and apps safe. It automatically scans your device and makes sure you have the latest in mobile security, so you can rest easy.</span>
+				<span class="text1 flow-text grey-text text-lighten-2">The software continuously works to keep your device, data and apps safe. It automatically scans your device and makes sure you have the latest in mobile security, so you can rest easy.</span>
 			  </div>
 			</div>
 			</div>
@@ -184,7 +294,7 @@
 			<div class="container">
 			<div class="col s6">
 			<br><br><br><br><div style="border-radius: 10px 10px 10px 10px;" class="z-depth-4 card-panel red darken-2">
-				<span class="flow-text grey-text text-lighten-2">With Safe Browsing protection in Chrome, you can browse with confidence. If you visit a site that's acting out of line, you'll be warned and taken back to safety.</span>
+				<span class="text1 flow-text grey-text text-lighten-2">With Safe Browsing protection in Chrome, you can browse with confidence. If you visit a site that's acting out of line, you'll be warned and taken back to safety.</span>
 			  </div>
 			</div>
 			</div>
@@ -192,26 +302,27 @@
 		<br><br>
 		</div>
 		
-		<br><br><br><br>
-		<center><H3 class="grey-text text-darken-3">&nbsp&nbsp&nbsp&nbsp&nbspNotifications</H3>
+		<br><br><br id="notif"><br>
+		<br><br><center><H3 class="grey-text text-lighten-3">Notifications</H3>
 		<img class="materialboxed" src="images/Notif.png" width="810" height="250">
 		</center>
 		<div class="row">
 			<div class="container">
 			<div class="col s6">
 			<br><br><div style="border-radius: 10px 10px 10px 10px;" class="z-depth-4 card-panel pink darken-3">
-				<span class="flow-text grey-text text-lighten-2">Android can handle your notifications really well. They stack nicely when you have more than one for a single app, they are informative, and you can reply from them without opening an app and marking them as read. But only Android offers what's called a persistent notification.</span>
+				<span class="text2 flow-text grey-text text-lighten-2">Android can handle your notifications really well. They stack nicely when you have more than one for a single app, they are informative, and you can reply from them without opening an app and marking them as read. But only Android offers what's called a persistent notification.</span>
 			</div>
 			</div>
 			</div>
-		<div class="col s6"><center><img class="materialboxed" src="http://i.imgur.com/KWKb7XB.gif" width="220" height="420"></center></div>
+		<div class="col s6"><center><img style="border-radius: 10px 10px 10px 10px;" class="z-depth-5 materialboxed" src="http://i.imgur.com/KWKb7XB.gif" width="220" height="420"></center></div>
 		</div>
 		
+		<br><br id="choices"><br><br>
 		
-		<div class="end08"><H2 class="grey-text text-darken-3">&nbsp&nbsp&nbsp&nbsp&nbspChoices</H2></div>
+		<br><br><div class="end08"><H2 class="container grey-text text-lighten-3">Choices</H2></div><br>
 			<div class="container">
 			<div style="border-radius: 10px 10px 10px 10px;" class="z-depth-4 card-panel blue-grey darken-1">
-				<span class="flow-text grey-text text-lighten-2">This has always been one of Android’s main strengths. It’s very easy to theme your phone, you can set up the layout you want on your home screen, add widgets and shortcuts, and even change your entire user interface with launchers.<br><br> Android also allows you to set up third-party apps as your default options for many things that are still locked down in iOS. If you enjoy tinkering, or you want a truly unique, personalized look for your home screen, then Android is the platform for you.</span>
+				<span class="text3 flow-text grey-text text-lighten-2">This has always been one of Android’s main strengths. It’s very easy to theme your phone, you can set up the layout you want on your home screen, add widgets and shortcuts, and even change your entire user interface with launchers.<br><br> Android also allows you to set up third-party apps as your default options for many things that are still locked down in iOS. If you enjoy tinkering, or you want a truly unique, personalized look for your home screen, then Android is the platform for you.</span>
 			</div>
 			
 			<ul style="border-radius: 10px 10px 10px 10px;" class="white collapsible z-depth-3">
@@ -235,34 +346,69 @@
 			</li>
 			</ul>
 			</div>
+			
+		<br id="sync"><br><br>
+		<br><br><div class="end08"><H2 class="container grey-text text-lighten-3">Sync</H2></div>
+		<div class="row">
+		<div class="col s6"><br><br><center><div class="container"><img style="border-radius: 10px 10px 10px 10px;" class="materialboxed" src="https://www.bestusefultips.com/wp-content/uploads/2018/02/Account-sync-in-android-8.1-Oreo.jpg" width="230" height="370"></div></center></div>
+			<div class="container">
+			<div class="col s6">
+			<br><br><br><div style="border-radius: 10px 10px 10px 10px;" class="z-depth-3 card-panel grey lighten-4">
+				<span style="#position: absolute; #top: 50%;display: table-cell; vertical-align: middle;" class="text4 flow-text grey-text text-darken-4">By default, your apps made by Google automatically sync with your Google Account. You can turn auto-sync off or back on for individual apps made by Google. Whether other apps can sync varies by app. The data stored in your Google Account also syncs with all your Google devices and even computers.</span>
+			  </div>
+			</div>
+			</div>
+		</div>
+		<br id="ga"><br><br><br>
+		<div class="end08"><H2 class="container grey-text text-lighten-3">Google Assistant</H2></div><br>
+			<div class="container">
+			<div style="border-radius: 10px 10px 10px 10px;" class="z-depth-5 card-panel grey lighten-4">
+				<span class="text3 flow-text grey-text text-darken-2">The Google Assistant is a virtual assistant developed by Google that is primarily available on mobile and smart home devices. Unlike Google Now, the Google Assistant can engage in two-way conversations.
+
+Assistant initially debuted in May 2016 as part of Google's messaging app Allo, and its voice-activated speaker Google Home. After a period of exclusivity on the Pixel and Pixel XL smartphones, it began to be deployed on other Android devices in February 2017, including third-party smartphones and Android Wear, and was released as a standalone app on the iOS operating system in May. Alongside the announcement of a software development kit in April 2017, the Assistant has been, and is being, further extended to support a large variety of devices, including cars and smart home appliances. The functionality of the Assistant can also be enhanced by third-party developers.<br><br>
+
+ The Assistant is also be able to identify objects and gather visual information through the device's camera, and support purchasing products and sending money, as well as identifying songs.</span>
+			</div>
+			<div style="border-radius: 10px 10px 10px 10px;" class="z-depth-4 video-container">
+					<iframe style="border-radius: 10px 10px 10px 10px;" width="560" height="315" src="https://www.youtube.com/embed/eegp9AaqbxE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+			</div>
+			<div style="border-radius: 10px 10px 10px 10px;" class="grey lighten-5 card-panel z-depth-3">
+			<audio controls style="width: 100%;">
+			<source src="sounds/ga1.wav" type="audio/wav">
+			</audio>
+			</div>
+			<div style="border-radius: 10px 10px 10px 10px;" class="grey lighten-5 card-panel z-depth-3">
+			<audio controls style="width: 100%;">
+			<source src="sounds/ga2.wav" type="audio/wav">
+			</audio>
+			</div>
+			<div style="border-radius: 10px 10px 10px 10px;" class="grey lighten-5 card-panel z-depth-3">
+			<audio controls style="width: 100%;">
+			<source src="sounds/ga3.wav" type="audio/wav">
+			</audio>
+			</div>
+			
+			</div>
 		
-		
-		
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br  id="devicelocation">
-		<center><H3 class="grey-text text-darken-3">Device Location</H3><br>
+		<br><br><br  id="devicelocation">
+		<center><H3 class="grey-text text-lighten-3">Device Location</H3><br>
 		<img class="materialboxed" src="https://www.android.com/static/2016/img/security/overview/device-and-desktop_1x.png" width="670" height="710">
 		</center>
-		<div class="container"><div class="container"><div style="border-radius: 15px 15px 15px 15px;" class="container z-depth-4 card-panel  grey lighten-4">
-			<span class="flow-text grey-text text-darken-2">You can use Find My Device to remotely locate a lost device associated with a Google account. You can even add a screen-lock PIN, or erase all data on a device that's stolen or lost for good. Crisis averted.</span>
+		<div class="container"><div class="container"><div style="border-radius: 15px 15px 15px 15px;" class="container z-depth-2 card-panel  grey lighten-4">
+			<span class="flow-text grey-text text-darken-4">You can use Find My Device to remotely locate a lost device associated with a Google account. You can even add a screen-lock PIN, or erase all data on a device that's stolen or lost for good. Crisis averted.</span>
 		</div></div></div>
 		
 		<div class="fixed-action-btn">
-		  <a class="btn-floating btn-large red">
-			<i class="large material-icons">mode_edit</i>
+		  <a href="#start" class="z-depth-2 hoverable btn-floating btn tooltipped grey lighten-3" data-position="left" data-delay="50" data-tooltip="Back to top">
+			<i class="large material-icons grey-text darken-4">expand_less</i>
 		  </a>
-		  <ul>
-			<li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-			<li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-			<li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-			<li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-		  </ul>
 		</div>
 		
 		
 		  
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br
-		
-		<footer class="footerX page-footer blue darken-3">
+		<br><br><br><br>
+		<footer class="page-footer blue darken-3">
 			<div class="container">
 				<div class="row">
 					<div class="col l6 s12">
@@ -285,16 +431,66 @@
 				<a class="grey-text text-lighten-4 right" href="https://www.reddit.com/user/Amarius1/"><div class="chip blue darken-1 grey-text text-lighten-4 right"><img src="data:image/png;base64,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" alt="Contact Person">Google+</div></a>
 				</div>
 			</div>
-		
 		</footer>
+		</div>
+		
 		<script>
-		 document.addEventListener('DOMContentLoaded', function() {
-			var elems = document.querySelectorAll('.fixed-action-btn');
-			var instances = M.FloatingActionButton.init(elems, options);
-		  });
+		$(window).scroll(function() {
+			$('body').addClass('scrolling');
+			clearTimeout($.data(this, 'scrollTimer'));
+			$.data(this, 'scrollTimer', setTimeout(function() {
+				$('body').removeClass('scrolling');
+			}, 250));
+		});
+		</script>
+		<script>
+		$(function() {
+			var header = $(".btn-large");
+			$(window).scroll(function() {
+				var scroll = $(window).scrollTop();
 
-		  // Or with jQuery
+				if (scroll >= 500) {
+					header.removeClass('btn-large').addClass("btn");
+				} else {
+					header.removeClass("btn").addClass('btn-large');
+				}
+			});
+		});
+		</script>
+		<script>
+		$(function() {
+			var header = $(".shrinkm");
+			$(window).scroll(function() {
+				var scroll = $(window).scrollTop();
 
+				if (scroll >= 500) {
+					header.removeClass('shrinkm').addClass("shrinkl");
+				} else {
+					header.removeClass("shrinkl").addClass('shrinkm');
+				}
+			});
+		});
+		</script>
+		<script>
+		// When the user scrolls the page, execute myFunction 
+		window.onscroll = function() {myFunction()};
+
+		// Get the header
+		var header = document.getElementById("myHeader");
+
+		// Get the offset position of the navbar
+		var sticky = header.offsetTop;
+
+		// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+		function myFunction() {
+		  if (window.pageYOffset >= sticky) {
+			header.classList.add("sticky");
+		  } else {
+			header.classList.remove("sticky");
+		  }
+		}
+		</script>
+		<script>
 		  $(document).ready(function(){
 			$('.fixed-action-btn').floatingActionButton();
 		  });
@@ -388,6 +584,18 @@
 			$('.carousel').carousel('next');
 			setTimeout(autoplay, 4500);
 		}
+		</script>
+		<script>
+		document.addEventListener('DOMContentLoaded', function() {
+		var elems = document.querySelectorAll('.tooltipped');
+		var instances = M.Tooltip.init(elems, options);
+	  });
+
+	  // Or with jQuery
+
+	  $(document).ready(function(){
+		$('.tooltipped').tooltip();
+	  });
 		</script>
 		<script>
 		document.addEventListener('DOMContentLoaded', function() {

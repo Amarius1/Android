@@ -37,12 +37,36 @@
 			.come-in:nth-child(odd) {
 			  animation-duration: 1.3s; /* So they look staggered */
 			}
-
 			@keyframes come-in {
 			  to { transform: translateY(0); }
 			}
+			/* width */
+			::-webkit-scrollbar {
+				width: 7px;
+			}
+
+			/* Track */
+			::-webkit-scrollbar-track {
+				background: #f5f5f5 ; 
+			}
+
+			/* Handle */
+			::-webkit-scrollbar-thumb {
+				background: #bdbdbd; 
+			}
+
+			/* Handle on hover */
+			::-webkit-scrollbar-thumb:hover {
+				background: #757575; 
+			}
 		</style>
 		<style>
+		.starter { 
+				opacity: 0.985;
+			}
+			.starter { 
+			opacity: 0.985;
+		}
 		.parallax { 
 			/* The image used */
 			background-image: url("images/Background4.png");
@@ -97,6 +121,14 @@
 
 		p {margin:1em 0;}
 		</style>
+		<style>
+		 .backdrop{
+		   background-color: #212121;
+		 }
+		 .material-tooltip {
+		  border-radius: 60px;
+		}
+	  </style>
 		<title>Devices</title>
     </head>
     <body>
@@ -105,11 +137,11 @@
 			<script type="text/javascript" src="js/materialize.min.js"></script>
 			<!--THIS IS A NAVBAR-->
 			<div class="navbar-fixed">
-			<nav>
-				<div class="nav-wrapper z-depth-2 grey lighten-4 transparent" class="black" style="black position:relative;">
+			<nav class="starter">
+				<div class="nav-wrapper z-depth-2 grey lighten-4" class="black" style="black position:relative;">
 					<a href="#Main" style="black" class="logo">
 						<a href="#" class="brand-logo grey-text text-darken-3 center">Devices</a>
-						<a>&nbsp&nbsp&nbsp</a><a href="page01.html" class="hoverable btn-floating waves-effect waves-light red tooltipped" data-position="right" data-background-color="red lighten-3" data-tooltip="Click to go back."><i class="material-icons" style="position:absolute;left:0px; top:-11px;">arrow_back</i></a>
+						<a>&nbsp&nbsp&nbsp</a><a href="page01.html" class="hoverable btn-floating waves-effect waves-light red tooltipped" data-delay="50" data-position="right" data-background-color="red lighten-3" data-tooltip="Click to go back."><i class="material-icons" style="position:absolute;left:0px; top:-11px;">arrow_back</i></a>
 					</a>
 				<a href="#image-test" class="brand-logo black">
 					<ul id="nav-mobile" class="hoverable right hide-on-med-and-down  blue darken-3">
@@ -155,7 +187,7 @@
 								</ul>
 								</div>
 								<div class="col s1">
-									<a href="https://www.gsmarena.com/xiaomi_mi_a1-8776.php" class="hoverable btn-floating btn waves-effect waves-light red tooltipped" data-position="left" data-tooltip="Click for more details."><i class="material-icons">info_outline</i></a>
+									<a href="https://www.gsmarena.com/xiaomi_mi_a1-8776.php" class="hoverable btn-floating btn waves-effect waves-light red tooltipped" data-delay="30" data-position="left" data-tooltip="Click for more details."><i class="material-icons">info_outline</i></a>
 								</div>
 							</div>
 						</div>
@@ -176,7 +208,7 @@
 								</ul>
 								</div>
 							<div class="col s1">
-								<a href="https://www.gsmarena.com/motorola_moto_x4-8634.php" class="hoverable btn-floating btn waves-effect waves-light red tooltipped" data-position="left" data-tooltip="Click for more details."><i class="material-icons">info_outline</i></a>
+								<a href="https://www.gsmarena.com/motorola_moto_x4-8634.php" class="hoverable btn-floating btn waves-effect waves-light red tooltipped" data-delay="30" data-position="left" data-tooltip="Click for more details."><i class="material-icons">info_outline</i></a>
 							</div>
 							</div>
 						</div>
@@ -197,7 +229,7 @@
 								</ul>
 								</div>
 								<div class="col s1">
-									<a href="https://www.gsmarena.com/nokia_6_(2018)-8972.php" class="hoverable btn-floating btn waves-effect waves-light red tooltipped" data-position="left" data-tooltip="Click for more details."><i class="material-icons">info_outline</i></a>
+									<a href="https://www.gsmarena.com/nokia_6_(2018)-8972.php" class="hoverable btn-floating btn waves-effect waves-light red tooltipped" data-delay="30" data-position="left" data-tooltip="Click for more details."><i class="material-icons">info_outline</i></a>
 								</div>
 							</div>		
 						</div>
@@ -218,7 +250,7 @@
 								</ul>
 								</div>
 								<div class="col s1">
-									<a href="https://www.gsmarena.com/nokia_7_plus-9058.php" class="hoverable btn-floating btn waves-effect waves-light red tooltipped" data-position="left" data-tooltip="Click for more details."><i class="material-icons">info_outline</i></a>
+									<a href="https://www.gsmarena.com/nokia_7_plus-9058.php" class="hoverable btn-floating btn waves-effect waves-light red tooltipped" data-delay="30" data-position="left" data-tooltip="Click for more details."><i class="material-icons">info_outline</i></a>
 								</div>
 							</div>		
 						</div>
@@ -239,7 +271,7 @@
 								</ul>
 								</div>
 								<div class="col s1">
-									<a href="https://www.gsmarena.com/nokia_8_sirocco-9087.php" class="hoverable btn-floating btn waves-effect waves-light red tooltipped" data-position="left" data-tooltip="Click for more details."><i class="material-icons">info_outline</i></a>
+									<a href="https://www.gsmarena.com/nokia_8_sirocco-9087.php" class="hoverable btn-floating btn waves-effect waves-light red tooltipped" data-delay="30" data-position="left" data-tooltip="Click for more details."><i class="material-icons">info_outline</i></a>
 								</div>
 							</div>				
 						</div>
@@ -260,7 +292,7 @@
 								</ul>
 								</div>
 								<div class="col s1">
-									<a href="https://www.gsmarena.com/nokia_8_sirocco-9087.php" class="hoverable btn-floating btn waves-effect waves-light red tooltipped" data-position="left" data-tooltip="Click for more details."><i class="material-icons">info_outline</i></a>
+									<a href="https://www.gsmarena.com/nokia_8_sirocco-9087.php" class="hoverable btn-floating btn waves-effect waves-light red tooltipped" data-delay="30" data-position="left" data-tooltip="Click for more details."><i class="material-icons">info_outline</i></a>
 								</div>
 							</div>				
 						</div>

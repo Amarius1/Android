@@ -43,10 +43,40 @@
 			.carousel { 
 			min-height: 900px;
 			}
+			.resize-fill-and-clip{ 
+			background-size: cover;
+			}
 		</style>
+		<style>
+		 .backdrop{
+		   background-color: #212121;
+		 }
+		 .material-tooltip {
+		  border-radius: 60px;
+		}
+		/* width */
+		::-webkit-scrollbar {
+			width: 7px;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track {
+			background: #ffffff; 
+		}
+
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+			background: #bdbdbd; 
+		}
+
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+			background: #757575; 
+		}
+	  </style>
 		<title>Pixel2</title>
     </head>
-    <body background="images/Pixelx.png">
+    <body class="resize-fill-and-clip" background="images/Pixelx.png">
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="js/materialize.min.js"></script>
 		<a href="devices.html" class="hoverable btn-floating waves-effect waves-light red tooltipped end02" data-position="right" data-background-color="red lighten-3" data-tooltip="Click to go back."><i class="material-icons">arrow_back</i></a>
