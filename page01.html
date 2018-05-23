@@ -48,12 +48,15 @@
 			@keyframes come-in {
 			  to { transform: translateY(0); }
 			}
+			.resize-fill-and-clip{ 
+			background-size: cover;
+			}
 		</style>
 		<title>Android</title>
     </head>
-    <body background="images/Background.jpg">
-		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script type="text/javascript" src="js/materialize.min.js"></script>		
+    <body class="resize-fill-and-clip" background="images/Background.jpg">
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" async></script>
+		<script type="text/javascript" src="js/materialize.min.js" async></script>		
 		<div style="position: relative; left: 0; top: 0;">
 			<div class="end02x"><center><div class="my_container" style="text-grey darken-1-text"><H3 class="grey-text text-darken-3">Android</H3></div></center></div>
 			<a href="index.html" class="hoverable btn-floating waves-effect waves-light red tooltipped end02" data-position="right" data-background-color="red lighten-3" data-tooltip="Click to go back to the homepage."><i class="material-icons">arrow_back</i></a>

@@ -1,613 +1,221 @@
 <html>
-    <head>
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link type="text/css" rel="stylesheet preload prefetch" href="css/materialize.min.css"  media="screen,projection"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<meta charset="utf-8">
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-		<link rel="icon" href="http://diylogodesigns.com/blog/wp-content/uploads/2016/04/google-logo-icon-PNG-Transparent-Background.png">
-		<style>
-		
-			.end02
-			{
-				position: relative;
-				top: 12;
-				left: 12;
-			}
-			.end03
-			{
-				position: relative;
-				top: 12;
-				left: 24
-			}
-			.end04
-			{
-				position: relative;
-				top: 20%;
-				left: 0%;
-			}
-			.end05
-			{
-				position: absolute;
-				top:100%;
-				left: -0.8%;
-			}
-			.end06
-			{
-				position: relative;
-				top: 100px;
-				left: 0%;
-			}
-			.end07
-			{
-				position: relative;
-				top: 10%;
-				left: 0%;
-			}
-			.end08
-			{
-				position: relative;
-				top:0px;
-				left:0%;
-			}
-			.textt
-			{
-				position: relative;
-				top:9px;
-				left:13px;
-			}
-			.text1
-			{
-				position: relative;
-				top:2px;
-				left: 7px;
-			}
-			.text2
-			{
-				position: relative;
-				top:-1px;
-				left: 7px;
-			}
-			.text3
-			{
-				position: relative;
-				top:2px;
-				left: 6px;
-			}
-			.text4
-			{
-				position: relative;
-				top:2px;
-				left: 6px;
-			}
-			.protect
-			{
-				position: relative;
-				top:60%;
-				left:0%;
-			}
-			.icon
-			{
-				position: relative;
-				top: 0;
-				left: 85%;
-			}
-			.collapsible-header.active i.expand {
-				-ms-transform: rotate(180deg); /* IE 9 */
-				-webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
-				transform: rotate(180deg);
-			}
-			.collapsible-header i {
-			display: block;
-			float: left;
-			}
-			.parallax { 
-				/* The image used */
-				background-image: url("images/Earth2.jpg");
-
-				/* Set a specific height */
-				height: 7000px; 
-
-				/* Create the parallax scrolling effect */
-				background-attachment: fixed;
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: cover;
-			}
-			.zoom {
-				padding: 0;
-				transition: transform .2s; /* Animation */
-				width: 200px;
-				height: 200px;
-				margin: 0 auto;
-			}
-			.gradientx
-			{
-			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+45,ffffff+51,ffffff+51,ffffff+99,ffffff+99&1+30,0+99 */
-			background: -moz-linear-gradient(top, rgba(255,255,255,1) 30%, rgba(255,255,255,0.78) 45%, rgba(255,255,255,0.69) 51%, rgba(255,255,255,0) 99%); /* FF3.6-15 */
-			background: -webkit-linear-gradient(top, rgba(255,255,255,1) 30%,rgba(255,255,255,0.78) 45%,rgba(255,255,255,0.69) 51%,rgba(255,255,255,0) 99%); /* Chrome10-25,Safari5.1-6 */
-			background: linear-gradient(to bottom, rgba(255,255,255,1) 30%,rgba(255,255,255,0.78) 45%,rgba(255,255,255,0.69) 51%,rgba(255,255,255,0) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
-			height: 700px;
-			}
-			.zoom:hover {
-				transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-			}
-			.carousel .carousel-item {
-				width:500px;
-				height:800px;}
-			.carousel { 
-			min-height: 900px;
-			}
-			.come-in {
-			  transform: translateY(150px);
-			  animation: come-in 5s ease forwards;
-			}
-			.come-in:nth-child(odd) {
-			  animation-duration: 1s; /* So they look staggered */
-			}
-
-			@keyframes come-in {
-			  to { transform: translateY(0); }
-			}
-			.container {
-			  margin: 0 auto;
-			  max-width: 1280px;
-			  width: 90%;
-			}
-			@media only screen and (min-width: 601px)
-			  .container {
-				width: 85%;
-			}
-			@media only screen and (min-width: 993px)
-			  .container {
-				width: 80%;
-			}
-				.wrapper {
-				height:2000px;
-				}
-		</style>
-		<style>
-		 .backdrop{
-		   background-color: #212121;
-		}
-		 .material-tooltip {
-		  border-radius: 60px;
-		}
-		.sticky {
-		  position: fixed;
-		  top: 0;
-		  width: 100%
-
-		}
-		.header {
-		  padding: 10px 16px;
-		  background: #ffffff;
-		  z-index: 999;
-		}
-		.sticky + .content {
-		  padding-top: 60px;
-		}
-		.shrinkm
-		{
-		transform: scale(1, 1);
-		-ms-transform: scale(1, 1);
-		-webkit-transform: scale(1, 1);
-		position: relative;
-				top: -4%;
-				left: -4%;
-		}
-		.shrinkl
-		{
-		transform: scale(0.7, 0.7);
-		-ms-transform: scale(0.7, 0.7);
-		-webkit-transform: scale(0.7, 0.7);
-		position: relative;
-				top: -30%;
-				left: -30%;
-		}
-		.back
-		{
-			position: relative;
-			top: 0;
-			left: 0;
-		}
-		/* width */
-		::-webkit-scrollbar {
-			width: 7px;
-		}
-
-		/* Track */
-		::-webkit-scrollbar-track {
-			background: #ffffff; 
-		}
-
-		/* Handle */
-		::-webkit-scrollbar-thumb {
-			background: #888; 
-		}
-
-		/* Handle on hover */
-		::-webkit-scrollbar-thumb:hover {
-			background: #555; 
-		}
-		 </style>
-		<title>Features</title>
-    </head>
-    <body>
-		<div class="gradientx">
-		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script type="text/javascript" src="js/materialize.min.js"></script>
-		
-		<a href="index.html" class="hoverable btn-floating waves-effect waves-light red tooltipped end02" data-delay="30" data-position="right" data-background-color="red lighten-3" data-tooltip="Click to go back."><i class="material-icons">arrow_back</i></a>
-		<a href="devices.html">
-		<div class="chip end03 hoverable">
-		<img src="http://diylogodesigns.com/blog/wp-content/uploads/2016/04/google-logo-icon-PNG-Transparent-Background.png" alt="Contact Person">
-			Related: Index
-  		</div>
-		</a>
-		<Br id="start">
-		<div onselectstart="return false">
-		<center><img src="https://bootloop.es/wp-content/uploads/2017/09/ezgif.com-crop.gif" width="300" height="300"></center>
-		<center><img class="end04" src="images/Features.png" width="420" height="150"></center>
-		</div>
-		<center>
-		
-		<br>
-		<div class="header" id="myHeader">
-		<a href="#security" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light red" data-delay="50" data-position="bottom" data-tooltip="Security"><i class="tiny material-icons red">security</i></a>&nbsp&nbsp&nbsp&nbsp
-		<a href="#notif" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light pink darken-3" data-delay="50" data-position="bottom" data-tooltip="Notifications"><i class="material-icons  pink darken-3">notifications_active</i></a>&nbsp&nbsp&nbsp&nbsp
-		<a href="#choices" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light blue-grey darken-1" data-delay="50" data-position="bottom" data-tooltip="Choices"><i class="material-icons blue-grey darken-1">settings</i></a>&nbsp&nbsp&nbsp&nbsp
-		<a href="#sync" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light grey darken-4" data-delay="50" data-position="bottom" data-tooltip="Sync"><i class="material-icons grey darken-4">sync</i></a>&nbsp&nbsp&nbsp&nbsp
-		<a href="#ga" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light white" data-delay="50" data-position="bottom" data-tooltip="Google Assistant"><img class="shrinkm" src="https://www.apkmirror.com/wp-content/uploads/2017/10/59d6700c6221e.png" width="63" height="63"></a>&nbsp&nbsp&nbsp&nbsp
-		<a href="#wear" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light blue-grey darken-2" data-delay="50" data-position="bottom" data-tooltip="WearOS"><i class="material-icons blue-grey darken-2">watch</i></a>&nbsp&nbsp&nbsp&nbsp
-		<a href="#smart" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light blue-grey darken-4" data-delay="50" data-position="bottom" data-tooltip="Smart Lock"><i class="material-icons blue-grey darken-4">lock_open</i></a>&nbsp&nbsp&nbsp&nbsp
-		<a href="#devicelocation" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light green darken-2" data-delay="50" data-position="bottom" data-tooltip="Device Location"><i class="material-icons  green darken-2">location_on</i></a>
-		</div>
-		</div>
-		
-		<div class="parallax">
-		</center>
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br id="security"><br><br>
-		<br><div class="end08"><H2 class="grey-text text-lighten-3 container">Security</H2></div><br>
-		<div class="container">
-			<div style="border-radius: 10px 10px 10px 10px;" class="z-depth-3 card-panel grey lighten-4">
-			<div class="row">
-				<div class="col s9"><span style="#position: absolute; #top: 50%;display: table-cell; vertical-align: middle;" class="textt flow-text grey-text text-darken-4">Google Play Protect is Google's built-in malware protection for Android. Backed by the strength of Google's machine learning algorithms, it is always improving in real time.<br><br>All Android apps undergo rigorous security testing before appearing in the Google Play Store. They vet every app and developer in Google Play, and suspend those who violate our policies. Then, Play Protect scans billions of apps daily to make sure everything remains spot on. That way, no matter where you download an app from, you know it’s been checked by Google Play Protect.</span></div>
-				<div class="col s3"><br><br><center><img class="materialboxed" src="https://www.android.com/static/2016/img/play-protect/google-play-protect.png" width="250" height="250" id="overlay"></center></div>
-				</div>
-			</div>
-		</div>
-		<br><br><br><br><br>
-		<div class="row">
-		<div class="col s6"><center><div class="container"><img class="materialboxed" src="https://www.android.com/static/2016/img/security/overview/device-app-are-free.png" width="420" height="420"></div></center></div>
-			<div class="container">
-			<div class="col s6">
-			<br><br><br><div style="border-radius: 10px 10px 10px 10px;" class="z-depth-4 card-panel amber darken-3">
-				<span class="text1 flow-text grey-text text-lighten-2">The software continuously works to keep your device, data and apps safe. It automatically scans your device and makes sure you have the latest in mobile security, so you can rest easy.</span>
-			  </div>
-			</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="container">
-			<div class="col s6">
-			<br><br><br><br><div style="border-radius: 10px 10px 10px 10px;" class="z-depth-4 card-panel red darken-2">
-				<span class="text1 flow-text grey-text text-lighten-2">With Safe Browsing protection in Chrome, you can browse with confidence. If you visit a site that's acting out of line, you'll be warned and taken back to safety.</span>
-			  </div>
-			</div>
-			</div>
-		<div class="col s6"><center><img class="materialboxed" src="https://www.android.com/static/2016/img/security/overview/device-warning_1x.png" width="420" height="420"></center></div>
-		<br><br>
-		</div>
-		
-		<br><br><br id="notif"><br>
-		<br><br><center><H3 class="grey-text text-lighten-3">Notifications</H3>
-		<img class="materialboxed" src="images/Notif.png" width="810" height="250">
-		</center>
-		<div class="row">
-			<div class="container">
-			<div class="col s6">
-			<br><br><div style="border-radius: 10px 10px 10px 10px;" class="z-depth-4 card-panel pink darken-3">
-				<span class="text2 flow-text grey-text text-lighten-2">Android can handle your notifications really well. They stack nicely when you have more than one for a single app, they are informative, and you can reply from them without opening an app and marking them as read. But only Android offers what's called a persistent notification.</span>
-			</div>
-			</div>
-			</div>
-		<div class="col s6"><center><img style="border-radius: 10px 10px 10px 10px;" class="z-depth-5 materialboxed" src="http://i.imgur.com/KWKb7XB.gif" width="220" height="420"></center></div>
-		</div>
-		
-		<br><br id="choices"><br><br>
-		
-		<br><br><div class="end08"><H2 class="container grey-text text-lighten-3">Choices</H2></div><br>
-			<div class="container">
-			<div style="border-radius: 10px 10px 10px 10px;" class="z-depth-4 card-panel blue-grey darken-1">
-				<span class="text3 flow-text grey-text text-lighten-2">This has always been one of Android’s main strengths. It’s very easy to theme your phone, you can set up the layout you want on your home screen, add widgets and shortcuts, and even change your entire user interface with launchers.<br><br> Android also allows you to set up third-party apps as your default options for many things that are still locked down in iOS. If you enjoy tinkering, or you want a truly unique, personalized look for your home screen, then Android is the platform for you.</span>
-			</div>
-			
-			<ul style="border-radius: 10px 10px 10px 10px;" class="white collapsible z-depth-3">
-			<li>
-				<div onselectstart="return false" style="border-radius: 10px 10px 10px 10px;" class="collapsible-header grey lighten-4"><i class="material-icons">create</i>Customizability<i class="icon material-icons expand">expand_less</i></div>
-				<div style="border-radius: 0px 0px 10px 10px;" class="collapsible-body white"><span> 
-				<ul>
-					<li><b>Launchers</b></li>
-					<li><b>Wallpapers</b></li>
-					<li><b>Icon packs</b></li>
-					<li><b>Sound packs</b></li>
-					<li><b>Keyboards</b></li>
-					<li><b>SMS apps</b></li>
-					<li><b>Widgets</b></li>
-					<li><b>Lockscreens</b></li>
-					<li><b>Automation</b></li>
-					<li><b>Equalisers</b></li>
-					<li><b>Notification shades</b></li>
-				</ul>	  
-				</span></div>
-			</li>
-			</ul>
-			</div>
-			
-		<br id="sync"><br><br>
-		<br><br><div class="end08"><H2 class="container grey-text text-lighten-3">Sync</H2></div>
-		<div class="row">
-		<div class="col s6"><br><br><center><div class="container"><img style="border-radius: 10px 10px 10px 10px;" class="materialboxed" src="https://www.bestusefultips.com/wp-content/uploads/2018/02/Account-sync-in-android-8.1-Oreo.jpg" width="230" height="370"></div></center></div>
-			<div class="container">
-			<div class="col s6">
-			<br><br><br><div style="border-radius: 10px 10px 10px 10px;" class="z-depth-3 card-panel grey lighten-4">
-				<span style="#position: absolute; #top: 50%;display: table-cell; vertical-align: middle;" class="text4 flow-text grey-text text-darken-4">By default, your apps made by Google automatically sync with your Google Account. You can turn auto-sync off or back on for individual apps made by Google. Whether other apps can sync varies by app. The data stored in your Google Account also syncs with all your Google devices and even computers.</span>
-			  </div>
-			</div>
-			</div>
-		</div>
-		<br id="ga"><br><br><br>
-		<div class="end08"><H2 class="container grey-text text-lighten-3">Google Assistant</H2></div><br>
-			<div class="container">
-			<div style="border-radius: 10px 10px 10px 10px;" class="z-depth-5 card-panel grey lighten-4">
-				<span class="text3 flow-text grey-text text-darken-2">The Google Assistant is a virtual assistant developed by Google that is primarily available on mobile and smart home devices. Unlike Google Now, the Google Assistant can engage in two-way conversations.
-
+<head>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link type="text/css" rel="stylesheet preload prefetch" href="css/materialize.min.css" media="screen,projection"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="utf-8">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+<link rel="icon" href="https://i.pinimg.com/originals/18/4e/69/184e69b2c7122abcdd26e9edf036886f.png">
+<style>.end02{position:relative;top:12;left:12}.end03{position:relative;top:12;left:24}.end04{position:relative;top:20%;left:0}.end05{position:absolute;top:100%;left:-0.8%}.end06{position:relative;top:100px;left:0}.end07{position:relative;top:10%;left:0}.end08{position:relative;top:0;left:0}.end09{position:relative;top:140px;left:0}.five{position:relative;top:-100px;left:0}.wear{position:relative;top:-245px;left:43%}.textt{position:relative;top:9px;left:13px}.text1{position:relative;top:2px;left:7px}.text2{position:relative;top:-1px;left:7px}.text3{position:relative;top:2px;left:6px}.text4{position:relative;top:2px;left:6px}.protect{position:relative;top:60%;left:0}.icon{position:relative;top:0;left:85%}.collapsible-header.active i.expand{-ms-transform:rotate(180deg);-webkit-transform:rotate(180deg);transform:rotate(180deg)}.collapsible-header i{display:block;float:left}.parallax{background-image:url("images/Earth2.jpg");height:8300px;background-attachment:fixed;background-position:center;background-repeat:no-repeat;background-size:cover}.zoom{padding:0;transition:transform .2s;width:200px;height:200px;margin:0 auto}.gradientx{background:white;height:700px}.zoom:hover{transform:scale(1.5)}.carousel .carousel-item{width:500px;height:800px}.carousel{min-height:900px}.come-in{transform:translateY(150px);animation:come-in 5s ease forwards}.come-in:nth-child(odd){animation-duration:1s}@keyframes come-in{to{transform:translateY(0)}}.container{margin:0 auto;max-width:1280px;width:90%}@media only screen and (min-width:601px) .container{width:85%}@media only screen and (min-width:993px) .container{width:80%}.wrapper{height:2000px}</style>
+<style>.backdrop{background-color:#212121}.material-tooltip{border-radius:60px}.sticky{position:fixed;top:0;width:100%}.header{padding:10px 16px;background:#fff;z-index:999}.sticky+.content{padding-top:60px}.shrinkm{transform:scale(1,1);-ms-transform:scale(1,1);-webkit-transform:scale(1,1);position:relative;top:-4%;left:-4%}.shrinkl{transform:scale(0.7,0.7);-ms-transform:scale(0.7,0.7);-webkit-transform:scale(0.7,0.7);position:relative;top:-30%;left:-30%}.back{position:relative;top:0;left:0}::-webkit-scrollbar{width:7px}::-webkit-scrollbar-track{background:#fff}::-webkit-scrollbar-thumb{background:#888}::-webkit-scrollbar-thumb:hover{background:#555}</style>
+<title>Features</title>
+</head>
+<body>
+<div class="gradientx">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<a href="index.html" class="hoverable btn-floating waves-effect waves-light red tooltipped end02" data-delay="30" data-position="right" data-background-color="red lighten-3" data-tooltip="Click to go back."><i class="material-icons">arrow_back</i></a>
+<a href="pixel.html">
+<div class="chip end03 hoverable">
+<img src="http://diylogodesigns.com/blog/wp-content/uploads/2016/04/google-logo-icon-PNG-Transparent-Background.png" alt="Contact Person">
+Related: Google
+</div>
+</a>
+<Br id="start">
+<div onselectstart="return false">
+<center><img src="https://bootloop.es/wp-content/uploads/2017/09/ezgif.com-crop.gif" width="300" height="300"></center>
+<center><img class="end04" src="images/Features.png" width="420" height="150"></center>
+</div>
+<center>
+<br>
+<div class="header" id="myHeader">
+<a href="#security" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light red" data-delay="50" data-position="bottom" data-tooltip="Security"><i class="tiny material-icons red">security</i></a>&nbsp&nbsp&nbsp&nbsp
+<a href="#notif" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light pink darken-3" data-delay="50" data-position="bottom" data-tooltip="Notifications"><i class="material-icons pink darken-3">notifications_active</i></a>&nbsp&nbsp&nbsp&nbsp
+<a href="#choices" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light blue-grey darken-1" data-delay="50" data-position="bottom" data-tooltip="Choices"><i class="material-icons blue-grey darken-1">settings</i></a>&nbsp&nbsp&nbsp&nbsp
+<a href="#sync" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light grey darken-4" data-delay="50" data-position="bottom" data-tooltip="Sync"><i class="material-icons grey darken-4">sync</i></a>&nbsp&nbsp&nbsp&nbsp
+<a href="#ga" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light white" data-delay="50" data-position="bottom" data-tooltip="Google Assistant"><img class="shrinkm" src="https://www.apkmirror.com/wp-content/uploads/2017/10/59d6700c6221e.png" width="63" height="63"></a>&nbsp&nbsp&nbsp&nbsp
+<a href="#wear" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light blue-grey darken-3" data-delay="50" data-position="bottom" data-tooltip="WearOS"><i class="material-icons blue-grey darken-3">watch</i></a>&nbsp&nbsp&nbsp&nbsp
+<a href="#devicelocation" class="tooltipped z-depth-5 hoverable btn-floating btn-large waves-effect waves-light green darken-2" data-delay="50" data-position="bottom" data-tooltip="Device Location"><i class="material-icons green darken-2">location_on</i></a>
+</div>
+</div>
+<div class="parallax">
+</center>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br id="security"><br><br>
+<br><div class="end08"><H2 class="grey-text text-lighten-3 container">Security</H2></div><br>
+<div class="container">
+<div style="border-radius:10px 10px 10px 10px" class="z-depth-3 card-panel grey lighten-4">
+<div class="row">
+<div class="col s9"><span style="#position:absolute;#top:50%;display:table-cell;vertical-align:middle" class="textt flow-text grey-text text-darken-4">Google Play Protect is Google's built-in malware protection for Android. Backed by the strength of Google's machine learning algorithms, it is always improving in real time.<br><br>All Android apps undergo rigorous security testing before appearing in the Google Play Store. They vet every app and developer in Google Play, and suspend those who violate our policies. Then, Play Protect scans billions of apps daily to make sure everything remains spot on. That way, no matter where you download an app from, you know itâ€™s been checked by Google Play Protect.</span></div>
+<div class="col s3"><br><br><center><img class="materialboxed" src="https://www.android.com/static/2016/img/play-protect/google-play-protect.png" width="250" height="250" id="overlay"></center></div>
+</div>
+</div>
+</div>
+<br><br><br><br><br>
+<div class="row">
+<div class="col s6"><center><div class="container"><img class="materialboxed" src="https://www.android.com/static/2016/img/security/overview/device-app-are-free.png" width="420" height="420"></div></center></div>
+<div class="container">
+<div class="col s6">
+<br><br><br><div style="border-radius:10px 10px 10px 10px" class="z-depth-4 card-panel amber darken-3">
+<span class="text1 flow-text grey-text text-lighten-2">The software continuously works to keep your device, data and apps safe. It automatically scans your device and makes sure you have the latest in mobile security, so you can rest easy.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="container">
+<div class="col s6">
+<br><br><br><br><div style="border-radius:10px 10px 10px 10px" class="z-depth-4 card-panel red darken-2">
+<span class="text1 flow-text grey-text text-lighten-2">With Safe Browsing protection in Chrome, you can browse with confidence. If you visit a site that's acting out of line, you'll be warned and taken back to safety.</span>
+</div>
+</div>
+</div>
+<div class="col s6"><center><img class="materialboxed" src="https://www.android.com/static/2016/img/security/overview/device-warning_1x.png" width="420" height="420"></center></div>
+<br><br>
+</div>
+<br><br><br id="notif"><br>
+<br><br><center><H3 class="grey-text text-lighten-3">Notifications</H3>
+<img class="materialboxed" src="images/Notif.png" width="810" height="250">
+</center>
+<div class="row">
+<div class="container">
+<div class="col s6">
+<br><br><div style="border-radius:10px 10px 10px 10px" class="z-depth-4 card-panel pink darken-3">
+<span class="text2 flow-text grey-text text-lighten-2">Android can handle your notifications really well. They stack nicely when you have more than one for a single app, they are informative, and you can reply from them without opening an app and marking them as read. But only Android offers what's called a persistent notification.</span>
+</div>
+</div>
+</div>
+<div class="col s6"><center><img style="border-radius:10px 10px 10px 10px" class="z-depth-5 materialboxed" src="http://i.imgur.com/KWKb7XB.gif" width="220" height="420"></center></div>
+</div>
+<br><br id="choices"><br><br>
+<br><br><div class="end08"><H2 class="container grey-text text-lighten-3">Choices</H2></div><br>
+<div class="container">
+<div style="border-radius:10px 10px 10px 10px" class="z-depth-4 card-panel blue-grey darken-1">
+<span class="text3 flow-text grey-text text-lighten-2">This has always been one of Androidâ€™s main strengths. Itâ€™s very easy to theme your phone, you can set up the layout you want on your home screen, add widgets and shortcuts, and even change your entire user interface with launchers.<br><br> Android also allows you to set up third-party apps as your default options for many things that are still locked down in iOS. If you enjoy tinkering, or you want a truly unique, personalized look for your home screen, then Android is the platform for you.</span>
+</div>
+<ul style="border-radius:10px 10px 10px 10px" class="white collapsible z-depth-3">
+<li>
+<div onselectstart="return false" style="border-radius:10px 10px 10px 10px" class="collapsible-header grey lighten-4"><i class="material-icons">create</i>Customizability<i class="icon material-icons expand">expand_less</i></div>
+<div style="border-radius:0 0 10px 10px" class="collapsible-body white"><span>
+<ul>
+<li><b>Launchers</b></li>
+<li><b>Wallpapers</b></li>
+<li><b>Icon packs</b></li>
+<li><b>Sound packs</b></li>
+<li><b>Keyboards</b></li>
+<li><b>SMS apps</b></li>
+<li><b>Widgets</b></li>
+<li><b>Lockscreens</b></li>
+<li><b>Automation</b></li>
+<li><b>Equalisers</b></li>
+<li><b>Notification shades</b></li>
+</ul>
+</span></div>
+</li>
+</ul>
+</div>
+<br id="sync"><br><br>
+<br><br><div class="end08"><H2 class="container grey-text text-lighten-3">Sync</H2></div>
+<div class="row">
+<div class="col s6"><br><br><center><div class="container"><img style="border-radius:10px 10px 10px 10px" class="materialboxed" src="https://www.bestusefultips.com/wp-content/uploads/2018/02/Account-sync-in-android-8.1-Oreo.jpg" width="230" height="370"></div></center></div>
+<div class="container">
+<div class="col s6">
+<br><br><br><div style="border-radius:10px 10px 10px 10px" class="z-depth-3 card-panel grey lighten-4">
+<span style="#position:absolute;#top:50%;display:table-cell;vertical-align:middle" class="text4 flow-text grey-text text-darken-4">By default, your apps made by Google automatically sync with your Google Account. You can turn auto-sync off or back on for individual apps made by Google. Whether other apps can sync varies by app. The data stored in your Google Account also syncs with all your Google devices and even computers.</span>
+</div>
+</div>
+</div>
+</div>
+<br id="ga"><br><br><br>
+<div class="end08"><H2 class="container grey-text text-lighten-3">Google Assistant</H2></div><br>
+<div class="container">
+<div style="border-radius:10px 10px 10px 10px" class="z-depth-5 card-panel grey lighten-4">
+<span class="text3 flow-text grey-text text-darken-2">The Google Assistant is a virtual assistant developed by Google that is primarily available on mobile and smart home devices. Unlike Google Now, the Google Assistant can engage in two-way conversations.
 Assistant initially debuted in May 2016 as part of Google's messaging app Allo, and its voice-activated speaker Google Home. After a period of exclusivity on the Pixel and Pixel XL smartphones, it began to be deployed on other Android devices in February 2017, including third-party smartphones and Android Wear, and was released as a standalone app on the iOS operating system in May. Alongside the announcement of a software development kit in April 2017, the Assistant has been, and is being, further extended to support a large variety of devices, including cars and smart home appliances. The functionality of the Assistant can also be enhanced by third-party developers.<br><br>
-
- The Assistant is also be able to identify objects and gather visual information through the device's camera, and support purchasing products and sending money, as well as identifying songs.</span>
-			</div>
-			<div style="border-radius: 10px 10px 10px 10px;" class="z-depth-4 video-container">
-					<iframe style="border-radius: 10px 10px 10px 10px;" width="560" height="315" src="https://www.youtube.com/embed/eegp9AaqbxE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-			</div>
-			<div style="border-radius: 10px 10px 10px 10px;" class="grey lighten-5 card-panel z-depth-3">
-			<audio controls style="width: 100%;">
-			<source src="sounds/ga1.wav" type="audio/wav">
-			</audio>
-			</div>
-			<div style="border-radius: 10px 10px 10px 10px;" class="grey lighten-5 card-panel z-depth-3">
-			<audio controls style="width: 100%;">
-			<source src="sounds/ga2.wav" type="audio/wav">
-			</audio>
-			</div>
-			<div style="border-radius: 10px 10px 10px 10px;" class="grey lighten-5 card-panel z-depth-3">
-			<audio controls style="width: 100%;">
-			<source src="sounds/ga3.wav" type="audio/wav">
-			</audio>
-			</div>
-			
-			</div>
-		
-		<br><br><br  id="devicelocation">
-		<center><H3 class="grey-text text-lighten-3">Device Location</H3><br>
-		<img class="materialboxed" src="https://www.android.com/static/2016/img/security/overview/device-and-desktop_1x.png" width="670" height="710">
-		</center>
-		<div class="container"><div class="container"><div style="border-radius: 15px 15px 15px 15px;" class="container z-depth-2 card-panel  grey lighten-4">
-			<span class="flow-text grey-text text-darken-4">You can use Find My Device to remotely locate a lost device associated with a Google account. You can even add a screen-lock PIN, or erase all data on a device that's stolen or lost for good. Crisis averted.</span>
-		</div></div></div>
-		
-		<div class="fixed-action-btn">
-		  <a href="#start" class="z-depth-2 hoverable btn-floating btn tooltipped grey lighten-3" data-position="left" data-delay="50" data-tooltip="Back to top">
-			<i class="large material-icons grey-text darken-4">expand_less</i>
-		  </a>
-		</div>
-		
-		
-		  
-		<br><br><br><br>
-		<footer class="page-footer blue darken-3">
-			<div class="container">
-				<div class="row">
-					<div class="col l6 s12">
-						<h5 class="white-text">Android HTML5</h5>
-						<p class="grey-text text-lighten-4">A website created by Dorobantu Marius Alexander.</p>
-					</div>
-					<div class="col l4 offset-l2 s12">
-						<h5 class="white-text">Links</h5>
-						<ul>
-							<li><a class="grey-text text-lighten-3" href="https://www.android.com/">Android</a></li>
-							<li><a class="grey-text text-lighten-3" href="https://materializecss.com/about.html">Materialize library</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="footer-copyright">
-				<div class="container">
-				<a class="grey-text text-lighten-4 right" href="https://plus.google.com/113365997557269425009"><div class="chip blue darken-1 grey-text text-lighten-4 right"><img src="http://s.apptoko.com/a//uploads/thumbnails/072015/repost-for-reddit_icon.png" alt="Contact Person">Reddit</div></a>
-				<a class="grey-text text-lighten-4 right" href="https://www.facebook.com/malex.Alex2xx"><div class="chip blue darken-1 grey-text text-lighten-4 right"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAtFBMVEXy8vL////xQzbTLiry9fXxMiHy09HRFA3s0M/y+vrwLx3y+/vy9/fxQTTxPjD94+HQDwXxOivxNSXxNyjy6ejiOTDZMizyzszxTEDxLBjxYlnxiILxcWnxubbxZl3y2tjy4uHxtLHxW1HyxsPxq6fxvrvxeHHxnpnxSj7xV0zxkIrpPjP+7+7xUUbxpaDxmJPxgHrxjYfxbWXSIBvWQ0DwGADebWvVOjbcZGLnm5rstLP83No2ft0nAAAHSElEQVR4nO2ce0OqSBjGB8V2QaDUrDhd1DSrY/f2cnb7/t9rGcVUYHAeGGDGfZ8/s5Kf8zLP8F5k1qGLNX0BlYsIzRcRmi8iNF9EaL6I0HwRofkiQvNFhOaLCM0XEZovIjRfRGi+NoRPxys1eDEqFFM8ff8gJpzO3dBdKnxjNjNVNntbY7jz6Rbh17Mb+K1YveeR0/SVFpQzeu6tMfzAffxaE87Cb7zla+HMSETbSYAE4WRFOAlbu/I7V6de09cLyzu96vgJkPCaEx6HiZ/zSPXPu01fMajuud9LcfjhU0R4E6ReiF5yXz2TNhzbe3XTCxUF6pXFvpIxGqv/w6BI9U5/9LMxwmP2ml7bGL9/Z8qG49z1swKRa/DCbrIWN47USyMi1fYuMyN0tU5zJnpp+QGYYI2RCQ7ECP5zLmEUqTPd99TuTBihK+UTRpE6ZzpvOB6biyNUijCyxta5vpHqnLdEG6U8YbSM946eG47t3O9bQCnCyBpvtLRG7/RGYIIwYSvo3em34XTvevlbDEIYReq7rVek2va7RITKE0bW+DjWacNxxo85JliIsBW4E30QnYkrFaEQoUbWKGGChQi5NR7psIzO0X4TLEiohTXKmeA24RBC7Hw0bI3e6UcyV5GvIWufIb/fCoJpk5HqTOVM8FtnbdZutxfIn/jhz8aeGm3vZ0ZSKUeLiI4TtqFI5dbYTKR68ia40rC9JkQjdTBp4hDXnQzQCN0QopHqvtVujR57w/bQRUy2JgQjtXdRc37DGV0gJhhH6A4hGKm++1KjNdrOC7bFxBG6SwhGaqtGa+QmCF3bYotqmxBcxp4/rWfD6U4zEvZ5OmuLCOENp47UvyhhL9RiFylBCG44/dvKrdEb38rkKjYatvMJUWvsX1e7pzrXe9KhSZ0lgVKEcKReVpjfsO2chH2WFmmcDEJ9rLG4CW4TLoZnqYUFrbFTUVXcmWEPSukIXRKuXlsMd0GxSK2kKp5Rtc5XRoRuEca/s1lQ0BrVp/5lEvY7ylzAJOEaNFrQaBmRPcwP75VaY2SC0DEtECyggDD+o8s+8h79Hwqt0RuLqtaZ8vuXnwUIOyMsp6Uw9S+bsI/Vax2NfitCeOSwOXKvq7JG0AT9zpx5vxcjtJkzCZEPU0lVPL9qnVIQThxmFyZE6gOrtyttjc4M+1CX9ZQShIVCpgSfF90YAN/6xihDWOC2L2GNoAl+b27lCHMajjLlu0Wt0fawhP2mbaskIX9nyH4LVsUlq9ZrbR8yyhIWiR48UsGE/c7dUJ4w2gGgY7DvvoORanuyVevVG3Sutnc0BYS89wg66Q8eIWt0RpArRQ9sO+cnJYT8cRSyxg6Q+u9OOpAJJh+61RDC1ihdFceq1lmnQ0WE0UeNpYV6D1JVcefoAdrGBtep4FBGCD/VhPtT/2jCPrN3WR0hnJ7dm/oHE/aCJLRCQm6NUIo96OWm/rugCfrZR0KlhGiGyHfFVXHcBAURoZaQz6ZAkToQpf698S1kgu5MdFcrJoQztYGbmfp3ruVbt1r5mWflhHxGDHOwt1R+w7bRf5EzU6eekFsj1DaQskYFJlgxIVr18jsv3c3/s7sv0Cl3XxWvEkLUGrcbxsDWrf2V2GoI+RNdgERqEMRm5pyDf7e30awqwmJrUWLt6ycscj91y9y/9RPie2JwD0Wo5ONJlYRoN5bfA01Q6hGzUkL4bCIvwVmofkL0fCkr4Xm2fkLe2Yq1TEgo75mkfkL+nAdtIPsVmSBQjayBEG+uyxfYFlgHIc+3KItUuLWzFkLYGsWSNMH6CdG8p0BFpo/qIuS5a7DPLq2gX2CCrD5CtP6QFljvqJ8QTZ8lhNes6ifkT43gWMRGwaDgyFG9hLyWW8waO4UnqmsmhOvxKxWv/9dPyPMUsDX2Hkr0cNRPuOyLQZaxZB9OA4QMaxhbtm6VUCOEiDUWM8HGCXlVXKr26YelexobIpRsGFPRl9oYoUzDmJJv3GqOcO9suaL59wYJ9zSMqerxb5SQN4wJllHd91A0S7icfcnacAJ1szZNE2a3bqv8qrTGCTMaxtTOvDVPmJojVDy3qAPhrjWq/tpJLQi3Rpn8UPX8sB6E/EtUl9YYmaDqGXBdCFcNY1UMK2pDuJyIqWLgVCPCaBmrGG/XibAaESER6i8iJEL9RYREqL+IkAj1FxESof4iQiLUX0RIhPqLCIlQfxEhEeovIiRC/UWERKi/iJAI9RcREqH+IkIi1F9ESIT6iwiJUH8RIRHqLyIkQv31Pye8EA0iHwjh3+xDNDF/IIS/2L1o0vowCD//YV/hQROejJh1IwjTgyD8/GUx61jw9RwHQXgyjgitSXacHgLhyb8WJ7Rmmat4AIQccElofT27QQrSdMLPkz9G1prQsu6uwtDd1Z9GEZ6k9Nd0hRYTRno6TsgySCx58U+blxq8rHpEhOaLCM0XEZovIjRfRGi+iNB8EaH5IkLzRYTmiwjNFxGaLyI0X4dP+B8hgSHs8X7V9QAAAABJRU5ErkJggg==" alt="Contact Person">Gmail</div></a>
-				<a class="grey-text text-lighten-4 right" href="https://www.reddit.com/user/Amarius1/"><div class="chip blue darken-1 grey-text text-lighten-4 right"><img src="data:image/png;base64,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" alt="Contact Person">Google+</div></a>
-				</div>
-			</div>
-		</footer>
-		</div>
-		
-		<script>
-		$(window).scroll(function() {
-			$('body').addClass('scrolling');
-			clearTimeout($.data(this, 'scrollTimer'));
-			$.data(this, 'scrollTimer', setTimeout(function() {
-				$('body').removeClass('scrolling');
-			}, 250));
-		});
-		</script>
-		<script>
-		$(function() {
-			var header = $(".btn-large");
-			$(window).scroll(function() {
-				var scroll = $(window).scrollTop();
-
-				if (scroll >= 500) {
-					header.removeClass('btn-large').addClass("btn");
-				} else {
-					header.removeClass("btn").addClass('btn-large');
-				}
-			});
-		});
-		</script>
-		<script>
-		$(function() {
-			var header = $(".shrinkm");
-			$(window).scroll(function() {
-				var scroll = $(window).scrollTop();
-
-				if (scroll >= 500) {
-					header.removeClass('shrinkm').addClass("shrinkl");
-				} else {
-					header.removeClass("shrinkl").addClass('shrinkm');
-				}
-			});
-		});
-		</script>
-		<script>
-		// When the user scrolls the page, execute myFunction 
-		window.onscroll = function() {myFunction()};
-
-		// Get the header
-		var header = document.getElementById("myHeader");
-
-		// Get the offset position of the navbar
-		var sticky = header.offsetTop;
-
-		// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-		function myFunction() {
-		  if (window.pageYOffset >= sticky) {
-			header.classList.add("sticky");
-		  } else {
-			header.classList.remove("sticky");
-		  }
-		}
-		</script>
-		<script>
-		  $(document).ready(function(){
-			$('.fixed-action-btn').floatingActionButton();
-		  });
-        </script>
-		<script>
-		(function($) {
-
-		  /**
-		   * Copyright 2012, Digital Fusion
-		   * Licensed under the MIT license.
-		   * http://teamdf.com/jquery-plugins/license/
-		   *
-		   * @author Sam Sehnert
-		   * @desc A small plugin that checks whether elements are within
-		   *     the user visible viewport of a web browser.
-		   *     only accounts for vertical position, not horizontal.
-		   */
-
-		  $.fn.visible = function(partial) {
-			
-			  var $t            = $(this),
-				  $w            = $(window),
-				  viewTop       = $w.scrollTop(),
-				  viewBottom    = viewTop + $w.height(),
-				  _top          = $t.offset().top,
-				  _bottom       = _top + $t.height(),
-				  compareTop    = partial === true ? _bottom : _top,
-				  compareBottom = partial === true ? _top : _bottom;
-			
-			return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
-
-		  };
-			
-		})(jQuery);
-		</script>
-		<script>
-		$(window).scroll(function(event) {
-  
-		  $(".module").each(function(i, el) {
-			var el = $(el);
-			if (el.visible(true)) {
-			  el.addClass("come-in"); 
-			} 
-		  });
-		  
-		});
-		</script>
-		<script>
-		$('a[href*="#"]')
-		  // Remove links that don't actually link to anything
-		  .not('[href="#"]')
-		  .not('[href="#0"]')
-		  .click(function(event) {
-			// On-page links
-			if (
-			  location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-			  && 
-			  location.hostname == this.hostname
-			) {
-			  // Figure out element to scroll to
-			  var target = $(this.hash);
-			  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-			  // Does a scroll target exist?
-			  if (target.length) {
-				// Only prevent default if animation is actually gonna happen
-				event.preventDefault();
-				$('html, body').animate({
-				  scrollTop: target.offset().top
-				}, 250, function() {
-				  // Callback after animation
-				  // Must change focus!
-				  var $target = $(target);
-				  $target.focus();
-				  if ($target.is(":focus")) { // Checking if the target was focused
-					return false;
-				  } else {
-					$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-					$target.focus(); // Set focus again
-				  };
-				});
-			  }
-			}
-		  });
-		</script>
-		<script>
-		$('.carousel').carousel({
-			padding: 200    
-		});
-		autoplay()   
-		function autoplay() {
-			$('.carousel').carousel('next');
-			setTimeout(autoplay, 4500);
-		}
-		</script>
-		<script>
-		document.addEventListener('DOMContentLoaded', function() {
-		var elems = document.querySelectorAll('.tooltipped');
-		var instances = M.Tooltip.init(elems, options);
-	  });
-
-	  // Or with jQuery
-
-	  $(document).ready(function(){
-		$('.tooltipped').tooltip();
-	  });
-		</script>
-		<script>
-		document.addEventListener('DOMContentLoaded', function() {
-		var elems = document.querySelectorAll('.carousel');
-		var instances = M.Carousel.init(elems, options);
-		});
-		// Or with jQuery
-		$(document).ready(function(){
-			$('.carousel').carousel();
-		});	  
-		</script>
-	</body>
-	<script> $(document).ready(function () { $('.slider').slider({full_width: true}); }); </script>
-	<script $(document).ready(function(){$('.tap-target').tapTarget();});</script>	
+The Assistant is also be able to identify objects and gather visual information through the device's camera, and support purchasing products and sending money, as well as identifying songs.</span>
+</div>
+<div style="border-radius:10px 10px 10px 10px" class="z-depth-4 video-container">
+<iframe style="border-radius:10px 10px 10px 10px" width="560" height="315" src="https://www.youtube.com/embed/eegp9AaqbxE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+<div style="border-radius:10px 10px 10px 10px" class="grey lighten-5 card-panel z-depth-3">
+<audio controls style="width:100%">
+<source src="sounds/ga1.wav" type="audio/wav">
+</audio>
+</div>
+<div style="border-radius:10px 10px 10px 10px" class="grey lighten-5 card-panel z-depth-3">
+<audio controls style="width:100%">
+<source src="sounds/ga2.wav" type="audio/wav">
+</audio>
+</div>
+<div style="border-radius:10px 10px 10px 10px" class="grey lighten-5 card-panel z-depth-3">
+<audio controls style="width:100%">
+<source src="sounds/ga3.wav" type="audio/wav">
+</audio>
+</div>
+</div>
+<br id="wear"><div class="end09"><H2 class="grey-text text-lighten-3 container"><center>WearOS</center></H2></div><br><br><br><br><br><br><br><br>
+<center><img class="z-depth-4" style="border-radius:10px 10px 10px 10px" src="images/Wear.png"></center>
+<img class="wear" class="materialboxed" src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Android_Wear_20_Watch_Face.gif" width="180" height="180">
+<div class="row">
+<div class="container">
+<div class="col s6">
+<div style="border-radius:10px 10px 10px 10px" class="z-depth-4 card-panel blue-grey darken-2">
+<span class="text1 flow-text grey-text text-lighten-2">Wear OS, previously known as Android Wear, is a version of Google's Android operating system designed for smartwatches and other wearables By pairing with mobile phones running Android version 4.3 or newer, or iOS version 8.2 or newer with limited support from Google's pairing application, Wear OS integrates Google Assistant technology and mobile notifications into a smartwatch form factor.</span>
+</div>
+</div>
+</div>
+<div class="col s6"><center><img class="five materialboxed" src="https://2dncjt2ndla62hl6yl24wc9a-wpengine.netdna-ssl.com/wp-content/uploads/2017/03/android-wear2-google-assistant.gif" width="620" height="620"></center></div>
+<br><br>
+</div>
+<br><br><br id="devicelocation">
+<center><H3 class="grey-text text-lighten-3">Device Location</H3><br>
+<img class="materialboxed" src="https://www.android.com/static/2016/img/security/overview/device-and-desktop_1x.png" width="670" height="710">
+</center>
+<div class="container"><div class="container"><div style="border-radius:15px 15px 15px 15px" class="container z-depth-2 card-panel grey lighten-4">
+<span class="flow-text grey-text text-darken-4">You can use Find My Device to remotely locate a lost device associated with a Google account. You can even add a screen-lock PIN, or erase all data on a device that's stolen or lost for good. Crisis averted.</span>
+</div></div></div>
+<div class="fixed-action-btn">
+<a href="#start" class="z-depth-2 hoverable btn-floating btn tooltipped grey lighten-3" data-position="left" data-delay="50" data-tooltip="Back to top">
+<i class="large material-icons grey-text darken-4">expand_less</i>
+</a>
+</div>
+<br><br><br><br><br><br><br><br>
+<footer class="page-footer blue darken-3">
+<div class="container">
+<div class="row">
+<div class="col l6 s12">
+<h5 class="white-text">Android HTML5</h5>
+<p class="grey-text text-lighten-4"><i>A website created by Dorobantu Marius Alexander.</i><br><br><b>Sources from:</b><br>Wikipedia, Android Authority, Google, Android, Android Police</p>
+</div>
+<div class="col l4 offset-l2 s12">
+<h5 class="white-text">Links</h5>
+<ul>
+<li><a class="grey-text text-lighten-3" href="https://www.android.com/">Android</a></li>
+<li><a class="grey-text text-lighten-3" href="https://materializecss.com/about.html">Materialize library</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="footer-copyright">
+<div class="container">
+<a class="grey-text text-lighten-4 right" href="https://www.reddit.com/user/Amarius1/"><div class="chip blue darken-1 grey-text text-lighten-4 right"><img src="http://s.apptoko.com/a//uploads/thumbnails/072015/repost-for-reddit_icon.png" alt="Contact Person">Reddit</div></a>
+<a class="grey-text text-lighten-4 right" href="https://www.facebook.com/malex.Alex2xx"><div class="chip blue darken-1 grey-text text-lighten-4 right"><img src="data:image/png;base64,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" alt="Contact Person">Facebook</div></a>
+<a class="grey-text text-lighten-4 right" href="https://plus.google.com/113365997557269425009"><div class="chip blue darken-1 grey-text text-lighten-4 right"><img src="data:image/png;base64,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" alt="Contact Person">Google+</div></a>
+</div>
+</div>
+</footer>
+<script>$(window).scroll(function(){$("body").addClass("scrolling");clearTimeout($.data(this,"scrollTimer"));$.data(this,"scrollTimer",setTimeout(function(){$("body").removeClass("scrolling")},250))});</script>
+<script>$(function(){var a=$(".btn-large");$(window).scroll(function(){var b=$(window).scrollTop();if(b>=500){a.removeClass("btn-large").addClass("btn")}else{a.removeClass("btn").addClass("btn-large")}})});</script>
+<script>$(function(){var a=$(".shrinkm");$(window).scroll(function(){var b=$(window).scrollTop();if(b>=500){a.removeClass("shrinkm").addClass("shrinkl")}else{a.removeClass("shrinkl").addClass("shrinkm")}})});</script>
+<script>window.onscroll=function(){myFunction()};var header=document.getElementById("myHeader");var sticky=header.offsetTop;function myFunction(){if(window.pageYOffset>=sticky){header.classList.add("sticky")}else{header.classList.remove("sticky")}}</script>
+<script>$(document).ready(function(){$(".fixed-action-btn").floatingActionButton()});</script>
+<script>/*<![CDATA[*/(function(a){a.fn.visible=function(i){var g=a(this),e=a(window),d=e.scrollTop(),f=d+e.height(),j=g.offset().top,h=j+g.height(),c=i===true?h:j,b=i===true?j:h;return((b<=f)&&(c>=d))}})(jQuery);/*]]>*/</script>
+<script>$(window).scroll(function(a){$(".module").each(function(b,c){var c=$(c);if(c.visible(true)){c.addClass("come-in")}})});</script>
+<script>/*<![CDATA[*/$('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(a){if(location.pathname.replace(/^\//,"")==this.pathname.replace(/^\//,"")&&location.hostname==this.hostname){var b=$(this.hash);b=b.length?b:$("[name="+this.hash.slice(1)+"]");if(b.length){a.preventDefault();$("html, body").animate({scrollTop:b.offset().top},250,function(){var c=$(b);c.focus();if(c.is(":focus")){return false}else{c.attr("tabindex","-1");c.focus()}})}}});/*]]>*/</script>
+<script>$(".carousel").carousel({padding:200});autoplay();function autoplay(){$(".carousel").carousel("next");setTimeout(autoplay,4500)}</script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelectorAll(".tooltipped");var b=M.Tooltip.init(a,options)});$(document).ready(function(){$(".tooltipped").tooltip()});</script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelectorAll(".carousel");var b=M.Carousel.init(a,options)});$(document).ready(function(){$(".carousel").carousel()});</script>
+</body>
+<script>$(document).ready(function(){$(".slider").slider({full_width:true})});</script>
+<script $(document).ready(function(){$('.tap-target').tapTarget();});</script>
 </html>
